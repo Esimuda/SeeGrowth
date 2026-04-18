@@ -1359,6 +1359,12 @@ button { font-family: var(--font-main); }
 
 .booking-card:hover { transform: translateY(-4px); }
 
+.booking-card--image {
+  padding: 0;
+  overflow: hidden;
+  background: none;
+}
+
 /* Corner badge */
 .booking-corner-badge {
   position: absolute;
