@@ -709,7 +709,7 @@ onReady(function () {
     });
   });
 
-  var bookingLink = document.querySelector('.booking-card--image a');
+  var bookingLink = document.querySelector('.booking-cta');
   if (bookingLink) {
     bookingLink.addEventListener('click', function () {
       if (typeof gtag === 'function') {
