@@ -14,8 +14,18 @@
    UTILITY — run after DOM is parsed
    --------------------------------------------------------------- */
 function onReady(fn) {
-  if (document.readyState !== 'loading') { fn(); }
-  else { document.addEventListener('DOMContentLoaded', fn); }
+  function start() {
+    if (document.getElementById('nav-root') && !document.getElementById('navbar')) {
+      setTimeout(start, 20);
+      return;
+    }
+    fn();
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start);
+  } else {
+    start();
+  }
 }
 
 function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
@@ -241,6 +251,7 @@ onReady(function () {
 
   /* ==============================================================
      8. NAVBAR — shadow + active section tracking
+        React owns open/close; this only tracks the active section.
      ============================================================== */
   var navbar   = document.getElementById('navbar');
   var navLinks = document.querySelectorAll('.nav-links a');
@@ -253,7 +264,7 @@ onReady(function () {
   document.head.appendChild(activeStyle);
 
   function updateNav() {
-    navbar.classList.toggle('scrolled', window.scrollY > 20);
+    if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 20);
     var cur = '';
     sections.forEach(function (s) {
       if (window.scrollY >= s.offsetTop - 100) cur = s.id;
@@ -269,30 +280,35 @@ onReady(function () {
 
   /* ==============================================================
      9. MOBILE HAMBURGER
+        Skip if React mounted the nav (hamburger already wired).
      ============================================================== */
   var hamburger = document.getElementById('hamburger');
   var mobileNav = document.getElementById('mobileNav');
+  var reactNav  = document.getElementById('nav-root');
 
   function closeMenu() {
+    if (!mobileNav || !hamburger) return;
     mobileNav.classList.remove('open');
     hamburger.classList.remove('open');
     hamburger.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
   }
 
-  hamburger.addEventListener('click', function () {
-    var opening = !mobileNav.classList.contains('open');
-    if (opening) {
-      mobileNav.classList.add('open');
-      hamburger.classList.add('open');
-      hamburger.setAttribute('aria-expanded', 'true');
-      document.body.style.overflow = 'hidden';
-    } else { closeMenu(); }
-  });
+  if (hamburger && mobileNav && !reactNav) {
+    hamburger.addEventListener('click', function () {
+      var opening = !mobileNav.classList.contains('open');
+      if (opening) {
+        mobileNav.classList.add('open');
+        hamburger.classList.add('open');
+        hamburger.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      } else { closeMenu(); }
+    });
 
-  mobileNav.querySelectorAll('a').forEach(function (a) {
-    a.addEventListener('click', closeMenu);
-  });
+    mobileNav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', closeMenu);
+    });
+  }
 
 
   /* ==============================================================
@@ -302,18 +318,18 @@ onReady(function () {
     getComputedStyle(document.documentElement).getPropertyValue('--nav-h')
   ) || 68;
 
-  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
-    a.addEventListener('click', function (e) {
-      var id = a.getAttribute('href');
-      if (id === '#') return;
-      var target = document.querySelector(id);
-      if (!target) return;
-      e.preventDefault();
-      closeMenu();
-      window.scrollTo({
-        top: target.getBoundingClientRect().top + window.pageYOffset - NAV_H,
-        behavior: 'smooth'
-      });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var id = a.getAttribute('href');
+    if (!id || id === '#') return;
+    var target = document.querySelector(id);
+    if (!target) return;
+    e.preventDefault();
+    closeMenu();
+    window.scrollTo({
+      top: target.getBoundingClientRect().top + window.pageYOffset - NAV_H,
+      behavior: 'smooth'
     });
   });
 

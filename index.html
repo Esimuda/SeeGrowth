@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SeeGrowth – See Growth. Scale Smart. Grow Global.</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 
   <!-- SEO -->
@@ -41,85 +41,8 @@
 </head>
 <body>
 
-  <!-- ============================================================
-       NAVIGATION BAR
-  ============================================================ -->
-  <nav class="navbar" id="navbar">
-    <a href="#home" class="logo">
-      <span class="logo-icon" aria-hidden="true"></span>
-      <span class="logo-text">SEEGROWTH</span>
-    </a>
-
-    <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#case-studies">Case Studies</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#faq">FAQ</a></li>
-    </ul>
-
-    <a href="#booking" class="btn-primary nav-cta">Get Started &rarr;</a>
-
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-
-  <!-- Mobile nav overlay -->
-  <div class="mobile-nav" id="mobileNav">
-    <ul>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#case-studies">Case Studies</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#booking" class="btn-primary">Get Started &rarr;</a></li>
-    </ul>
-  </div>
-
-
-  <!-- ============================================================
-       HERO SECTION
-  ============================================================ -->
-  <section class="hero" id="home">
-<div class="hero-shapes" aria-hidden="true">
-      <div class="geo-shape geo1"></div>
-      <div class="geo-shape geo2"></div>
-      <div class="geo-shape geo3"></div>
-      <div class="geo-shape geo4"></div>
-      <div class="geo-shape geo5"></div>
-      <div class="geo-shape geo6"></div>
-      <div class="geo-shape geo7"></div>
-    </div>
-
-    <div class="hero-content">
-      <span class="badge reveal-hero" data-delay="0">For Agency Owners</span>
-
-      <h1 class="reveal-hero" data-delay="100">
-        SEE GROWTH.<br />
-        SCALE SMART.<br />
-        GROW GLOBAL.
-      </h1>
-
-      <p class="hero-subtitle reveal-hero" data-delay="200">
-        Enabling sustainable growth for Web3 projects with data-driven marketing strategies that actually work.
-      </p>
-
-      <div class="hero-ctas reveal-hero" data-delay="300">
-        <a href="#booking" class="btn-primary">Get Started &rarr;</a>
-        <a href="#services" class="btn-secondary">View Services</a>
-      </div>
-
-      <div class="hero-social-proof reveal-hero" data-delay="400">
-        <div class="avatar-stack">
-          <div class="avatar av1">JA</div>
-          <div class="avatar av2">MA</div>
-          <div class="avatar av3">JD</div>
-          <div class="avatar av4">AJ</div>
-          <div class="avatar av5">+</div>
-        </div>
-        <span class="social-proof-text">200+ happy clients worldwide</span>
-      </div>
-    </div>
-  </section>
+  <div id="nav-root"></div>
+  <div id="hero-root"></div>
 
 
   <!-- ============================================================
@@ -182,7 +105,7 @@
     <!-- Service 1: Paid Traffic -->
     <div class="service-card" data-anim="flip-up">
       <div class="service-img">
-        <img src="assets/paid-traffic.jpg" alt="Person working on laptop for paid traffic campaigns" loading="lazy" />
+        <img src="/assets/paid-traffic.jpg" alt="Person working on laptop for paid traffic campaigns" loading="lazy" />
       </div>
       <div class="service-content light">
         <h3 class="service-title">PAID TRAFFIC</h3>
@@ -217,14 +140,14 @@
         <a href="#booking" class="btn-orange">Get Started &rarr;</a>
       </div>
       <div class="service-img">
-        <img src="assets/graphic-design.jpg" alt="Designer working at a desk on branding visuals" loading="lazy" />
+        <img src="/assets/graphic-design.jpg" alt="Designer working at a desk on branding visuals" loading="lazy" />
       </div>
     </div>
 
     <!-- Service 3: Content Marketing -->
     <div class="service-card" data-anim="flip-up" data-delay="240">
       <div class="service-img">
-        <img src="assets/content-marketing.jpg" alt="Person writing content strategy on a laptop" loading="lazy" />
+        <img src="/assets/content-marketing.jpg" alt="Person writing content strategy on a laptop" loading="lazy" />
       </div>
       <div class="service-content light">
         <h3 class="service-title">CONTENT MARKETING STRATEGY</h3>
@@ -350,7 +273,7 @@
         </p>
         <div class="testimonial-author">
           <div class="t-avatar-img">
-            <img src="assets/avatar-john.jpg" alt="John Adams" loading="lazy" decoding="async" />
+            <img src="/assets/avatar-john.jpg" alt="John Adams" loading="lazy" decoding="async" />
           </div>
           <div>
             <p class="t-name">John Adams</p>
@@ -367,7 +290,7 @@
         </p>
         <div class="testimonial-author">
           <div class="t-avatar-img">
-            <img src="assets/avatar-michael.jpg" alt="Michael Anderson" loading="lazy" decoding="async" />
+            <img src="/assets/avatar-michael.jpg" alt="Michael Anderson" loading="lazy" decoding="async" />
           </div>
           <div>
             <p class="t-name">Michael Anderson</p>
@@ -384,7 +307,7 @@
         </p>
         <div class="testimonial-author">
           <div class="t-avatar-img">
-            <img src="assets/avatar-jane.jpg" alt="Jane Does" loading="lazy" decoding="async" />
+            <img src="/assets/avatar-jane.jpg" alt="Jane Does" loading="lazy" decoding="async" />
           </div>
           <div>
             <p class="t-name">Jane Does</p>
@@ -401,7 +324,7 @@
         </p>
         <div class="testimonial-author">
           <div class="t-avatar-img">
-            <img src="assets/avatar-alex.jpg" alt="Alex James" loading="lazy" decoding="async" />
+            <img src="/assets/avatar-alex.jpg" alt="Alex James" loading="lazy" decoding="async" />
           </div>
           <div>
             <p class="t-name">Alex James</p>
@@ -521,6 +444,6 @@
     </ul>
   </footer>
 
-  <script src="script.js"></script>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
