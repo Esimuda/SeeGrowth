@@ -291,7 +291,7 @@
   isolation: isolate;
   z-index: 1;
   --hero-headline-top: 16.5%;
-  --hero-headline-offset: 11rem;
+  --hero-headline-offset: 12.5rem;
 }
 
 .hero.hero-bento::before {
@@ -349,7 +349,7 @@
 
 .hero-bento .hero-headline {
   position: absolute;
-  top: 16.5%;
+  top: var(--hero-headline-top);
   left: 50%;
   transform: translateX(-50%);
   width: min(92vw, 1100px);
@@ -399,7 +399,7 @@
   height: min(52vh, 520px);
   margin-inline: auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   pointer-events: none;
 }
@@ -424,7 +424,7 @@
   height: 100%;
   max-width: 100%;
   object-fit: contain;
-  object-position: center bottom;
+  object-position: top center;
   filter:
     contrast(1.06)
     saturate(1.12)
@@ -460,7 +460,7 @@
 
   .hero.hero-bento {
     --hero-headline-top: 14%;
-    --hero-headline-offset: 9.5rem;
+    --hero-headline-offset: 10.5rem;
   }
 
   .hero-person {
