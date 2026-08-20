@@ -1,7 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion';
 
 const HERO = {
-  headline: 'We Help You See Growth',
   person: {
     src: '/assets/hero-person-hd.png',
     alt: 'Futuristic strategist in a white hood with an orange visor, centered in the SeeGrowth hero',
@@ -21,8 +20,12 @@ const HERO = {
   },
 };
 
+const HEADLINE = [
+  { words: ['We', 'Help', 'You', 'See'] },
+  { words: ['Growth'], accent: true },
+];
+
 const ease = [0.22, 1, 0.36, 1];
-const words = HERO.headline.split(' ');
 
 function floatAnim(delay, distance = 10) {
   return {
@@ -40,20 +43,35 @@ export default function Hero() {
 
       <div className="hero-stage">
         <h1 className="hero-headline">
-          {words.map((word, i) => (
-            <span
-              key={`${word}-${i}`}
-              className={`hero-word${word.toLowerCase() === 'growth' ? ' hero-word--accent' : ''}`}
-            >
-              <motion.span
-                initial={reduce ? false : { y: '110%', opacity: 0 }}
-                animate={{ y: '0%', opacity: 1 }}
-                transition={{ duration: 0.7, delay: 0.12 + i * 0.08, ease: [0.76, 0, 0.24, 1] }}
+          {HEADLINE.map((line, lineIndex) => {
+            let wordOffset = HEADLINE.slice(0, lineIndex).reduce((sum, row) => sum + row.words.length, 0);
+
+            return (
+              <span
+                key={`line-${lineIndex}`}
+                className={`hero-headline__line${line.accent ? ' hero-headline__line--accent' : ''}`}
               >
-                {word}
-              </motion.span>
-            </span>
-          ))}
+                {line.words.map((word, wordIndex) => {
+                  const i = wordOffset + wordIndex;
+
+                  return (
+                    <span
+                      key={`${word}-${i}`}
+                      className={`hero-word${line.accent || word.toLowerCase() === 'growth' ? ' hero-word--accent' : ''}`}
+                    >
+                      <motion.span
+                        initial={reduce ? false : { y: '110%', opacity: 0 }}
+                        animate={{ y: '0%', opacity: 1 }}
+                        transition={{ duration: 0.7, delay: 0.12 + i * 0.08, ease: [0.76, 0, 0.24, 1] }}
+                      >
+                        {word}
+                      </motion.span>
+                    </span>
+                  );
+                })}
+              </span>
+            );
+          })}
         </h1>
 
         <motion.div

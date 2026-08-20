@@ -364,11 +364,18 @@
   text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
 }
 
+.hero-headline__line {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  column-gap: 0.28em;
+}
+
 .hero-word {
   display: inline-block;
   overflow: hidden;
   vertical-align: bottom;
-  padding-right: 0.28em;
 }
 
 .hero-word span {
