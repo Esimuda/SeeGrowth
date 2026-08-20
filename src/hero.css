@@ -429,7 +429,7 @@
   right: max(0px, calc(50% - 40rem));
   left: auto;
   transform: translateY(-48%);
-  width: min(34vw, 400px);
+  width: min(28vw, 330px);
   height: auto;
   aspect-ratio: 903 / 1024;
 }
@@ -515,7 +515,7 @@
   }
 
   .hero-art--right {
-    width: min(36vw, 340px);
+    width: min(30vw, 280px);
     height: auto;
     aspect-ratio: 903 / 1024;
     right: 2%;
@@ -569,7 +569,7 @@
     top: 62%;
     right: 0;
     left: auto;
-    width: min(42vw, 180px);
+    width: min(36vw, 150px);
     height: auto;
     aspect-ratio: 903 / 1024;
     transform: translateY(-50%);
