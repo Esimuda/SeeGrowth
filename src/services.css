@@ -87,39 +87,8 @@
   pointer-events: none;
 }
 
-.services-feature-spiral {
-  position: absolute;
-  right: -6%;
-  top: 6%;
-  width: 72%;
-  height: 88%;
-  object-fit: contain;
-  object-position: right center;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.92;
-  mix-blend-mode: screen;
-}
-
-.services-feature-top {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  align-items: flex-start;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  line-height: 1.35;
-  opacity: 0.92;
-}
-
-.services-feature-top span {
-  flex-shrink: 0;
-  opacity: 0.8;
-}
-
 .services-feature-stat {
-  margin: 48px 0 32px;
+  margin: 8px 0 32px;
 }
 
 .services-feature-number {

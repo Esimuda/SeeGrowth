@@ -67,17 +67,6 @@ export default function Services() {
             alt=""
             aria-hidden="true"
           />
-          <img
-            className="services-feature-spiral"
-            src="/assets/growth-spiral.svg"
-            alt=""
-            aria-hidden="true"
-          />
-
-          <div className="services-feature-top">
-            <p>Tailored solutions / For every protocol</p>
-            <span>2026</span>
-          </div>
 
           <div className="services-feature-stat">
             <span className="services-feature-number">3.4</span>
