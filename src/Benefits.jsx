@@ -1,5 +1,4 @@
 import { motion, useReducedMotion } from 'framer-motion';
-import roiPortrait from './assets/benefit-roi-fashion.webp';
 
 const CARDS = [
   {
@@ -11,7 +10,7 @@ const CARDS = [
   },
   {
     id: 'roi',
-    src: roiPortrait,
+    src: '/assets/benefit-roi.webp',
     alt: 'Editorial portrait in geometric red headwear and garment, representing precision and maximizing returns',
     title: 'Maximize ROI',
     href: '#services',
