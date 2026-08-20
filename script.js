@@ -101,7 +101,7 @@ onReady(function () {
         }
 
         /* Chart draw */
-        if (el.classList.contains('case-card') || el.querySelector('.chart-line')) {
+        if (el.classList.contains('cases-card') || el.classList.contains('case-card') || el.querySelector('.chart-line')) {
           drawChartLines(el);
         }
 
@@ -175,7 +175,7 @@ onReady(function () {
     });
   }, { threshold: 0.3 });
 
-  document.querySelectorAll('.case-card').forEach(function (c) { chartObs.observe(c); });
+  document.querySelectorAll('.cases-card, .case-card').forEach(function (c) { chartObs.observe(c); });
 
 
   /* ==============================================================
@@ -421,7 +421,7 @@ onReady(function () {
      15. CASE & SERVICE CARD — diagonal shine sweep on hover
      ============================================================== */
   if (!reduced) {
-    document.querySelectorAll('.case-card, .service-card').forEach(function (card) {
+    document.querySelectorAll('.cases-card, .case-card, .service-card').forEach(function (card) {
       card.style.position = 'relative';
       var shine = document.createElement('div');
       shine.setAttribute('aria-hidden', 'true');
