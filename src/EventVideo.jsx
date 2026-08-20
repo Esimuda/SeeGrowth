@@ -10,7 +10,6 @@ export default function EventVideo() {
   const videoRef = useRef(null);
   const [started, setStarted] = useState(false);
   const [showPlay, setShowPlay] = useState(true);
-  const [buffering, setBuffering] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -32,7 +31,6 @@ export default function EventVideo() {
     if (!video) return;
 
     setShowPlay(false);
-    setBuffering(true);
     setStarted(true);
 
     try {
@@ -51,15 +49,12 @@ export default function EventVideo() {
       video.playbackRate = 1;
       video.muted = false;
       await video.play();
-      setBuffering(false);
     } catch {
       try {
         video.muted = true;
         await video.play();
-        setBuffering(false);
       } catch {
         setShowPlay(true);
-        setBuffering(false);
       }
     }
   };
@@ -78,13 +73,7 @@ export default function EventVideo() {
           preload="auto"
           controls={started}
           controlsList="nodownload"
-          onWaiting={() => setBuffering(true)}
-          onPlaying={() => {
-            setBuffering(false);
-            setShowPlay(false);
-          }}
-          onCanPlay={() => setBuffering(false)}
-          onCanPlayThrough={() => setBuffering(false)}
+          onPlaying={() => setShowPlay(false)}
           onPause={() => {
             const video = videoRef.current;
             if (video && !video.ended && video.currentTime > 0.15) {
@@ -93,25 +82,10 @@ export default function EventVideo() {
           }}
           onEnded={() => {
             setShowPlay(true);
-            setBuffering(false);
             const video = videoRef.current;
             if (video) video.currentTime = 0;
           }}
         />
-
-        <AnimatePresence>
-          {buffering && !showPlay && (
-            <motion.div
-              className="event-video-buffering"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              aria-hidden="true"
-            >
-              <span />
-            </motion.div>
-          )}
-        </AnimatePresence>
 
         <AnimatePresence>
           {showPlay && (

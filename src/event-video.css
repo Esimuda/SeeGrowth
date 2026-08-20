@@ -33,31 +33,6 @@
   object-fit: cover;
 }
 
-.event-video-buffering {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  display: grid;
-  place-items: center;
-  pointer-events: none;
-  background: rgba(0, 0, 0, 0.18);
-}
-
-.event-video-buffering span {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  border: 3px solid rgba(255, 255, 255, 0.25);
-  border-top-color: #F26419;
-  animation: event-video-spin 0.75s linear infinite;
-}
-
-@keyframes event-video-spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .event-video-play {
   position: absolute;
   inset: 0;
