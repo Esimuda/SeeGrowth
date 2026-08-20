@@ -1266,21 +1266,6 @@ button { font-family: var(--font-main); }
   align-items: start;
 }
 
-.faq-pill {
-  display: inline-flex;
-  align-items: center;
-  padding: 6px 14px;
-  border-radius: 999px;
-  border: 1.5px solid var(--orange);
-  color: var(--orange);
-  font-family: var(--font-main);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 18px;
-}
-
 .faq-headline {
   margin: 0;
   font-family: var(--font-display);
