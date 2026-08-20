@@ -54,7 +54,10 @@ export default function Hero() {
       <div className="hero-stage">
         <h1 className="hero-headline">
           {words.map((word, i) => (
-            <span key={`${word}-${i}`} className="hero-word">
+            <span
+              key={`${word}-${i}`}
+              className={`hero-word${word.toLowerCase() === 'growth' ? ' hero-word--accent' : ''}`}
+            >
               <motion.span
                 initial={reduce ? false : { y: '110%', opacity: 0 }}
                 animate={{ y: '0%', opacity: 1 }}

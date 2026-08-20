@@ -272,6 +272,10 @@
   will-change: transform, opacity;
 }
 
+.hero-word--accent span {
+  color: var(--orange);
+}
+
 .hero-person {
   position: absolute;
   left: 50%;
