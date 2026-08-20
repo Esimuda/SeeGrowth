@@ -499,7 +499,7 @@
     width: 100%;
     font-size: 34px;
     pointer-events: auto;
-    margin-bottom: 8px;
+    margin-bottom: 28px;
     transform: none;
     left: auto;
     top: auto;
@@ -512,7 +512,7 @@
     top: auto;
     height: min(260px, 40vh);
     width: min(100%, 240px);
-    margin: 16px auto 0;
+    margin: 0 auto;
   }
 }
 
