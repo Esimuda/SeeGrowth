@@ -428,6 +428,7 @@
 .hero-slot--users {
   left: 5.2%;
   bottom: 14%;
+  overflow: visible;
 }
 
 .hero-card {
@@ -450,7 +451,7 @@
   box-shadow:
     0 18px 50px rgba(242, 100, 25, 0.28),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hero-card--users::before {
@@ -467,7 +468,7 @@
   pointer-events: none;
 }
 
-.hero-card--users > * {
+.hero-card--users > *:not(.users-go) {
   position: relative;
   z-index: 1;
 }
@@ -489,7 +490,7 @@
   box-shadow:
     0 10px 24px rgba(0, 0, 0, 0.45),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  z-index: 2;
+  z-index: 10;
   transition:
     background 0.25s ease,
     border-color 0.25s ease,
