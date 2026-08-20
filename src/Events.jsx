@@ -1,67 +1,32 @@
 import { useCallback, useEffect, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 
-const SLIDES = [
-  {
-    id: 'launch',
-    theme: '#F26419',
-    shell: '#7a2e0f',
-    label: 'Growth Launch',
-    left: {
-      src: '/assets/events/event-1a.webp',
-      alt: 'Audience at a SeeGrowth launch night',
-    },
-    right: {
-      src: '/assets/service-paid-rocket.webp',
-      alt: 'Iridescent rocket marking launch energy',
-      object: true,
-    },
-  },
-  {
-    id: 'signal',
-    theme: '#111111',
-    shell: '#2a1212',
-    label: 'Signal Sessions',
-    left: {
-      src: '/assets/events/event-2a.webp',
-      alt: 'Modern conference hall ready for Signal Sessions',
-    },
-    right: {
-      src: '/assets/events/event-2b.webp',
-      alt: 'Speaker presenting on stage',
-    },
-  },
-  {
-    id: 'studio',
-    theme: '#1f6b4a',
-    shell: '#123528',
-    label: 'Studio Labs',
-    left: {
-      src: '/assets/events/event-3a.webp',
-      alt: 'Workshop crowd during Studio Labs',
-    },
-    right: {
-      src: '/assets/service-brand-star.webp',
-      alt: 'Iridescent star for brand systems',
-      object: true,
-    },
-  },
-  {
-    id: 'circle',
-    theme: '#3d6ea5',
-    shell: '#1d334d',
-    label: 'Founders Circle',
-    left: {
-      src: '/assets/events/event-4a.webp',
-      alt: 'Founders Circle networking dinner',
-    },
-    right: {
-      src: '/assets/service-content-torus.webp',
-      alt: 'Iridescent torus for community loops',
-      object: true,
-    },
-  },
+const PHOTOS = Array.from({ length: 18 }, (_, i) => {
+  const n = String(i + 1).padStart(2, '0');
+  return {
+    src: `/assets/events/event-photo-${n}.webp`,
+    alt: `SeeGrowth community event photo ${i + 1}`,
+  };
+});
+
+const THEMES = [
+  { theme: '#F26419', shell: '#7a2e0f', label: 'Community nights' },
+  { theme: '#111111', shell: '#1a1212', label: 'Team tables' },
+  { theme: '#1f6b4a', shell: '#123528', label: 'Founders dinners' },
+  { theme: '#3d6ea5', shell: '#1d334d', label: 'On-stage moments' },
+  { theme: '#6b2d5b', shell: '#2d1528', label: 'Hacker house' },
+  { theme: '#8a4b1f', shell: '#3a2412', label: 'Builder meetups' },
+  { theme: '#2f4f4f', shell: '#1a2a2a', label: 'Alliance sessions' },
+  { theme: '#4a3f6b', shell: '#221c33', label: 'Partner rooms' },
+  { theme: '#5c3d2e', shell: '#2a1c16', label: 'After hours' },
 ];
+
+const SLIDES = THEMES.map((theme, i) => ({
+  id: `slide-${i + 1}`,
+  ...theme,
+  left: PHOTOS[i * 2],
+  right: PHOTOS[i * 2 + 1],
+}));
 
 const ease = [0.22, 1, 0.36, 1];
 
@@ -72,13 +37,10 @@ export default function Events() {
   const [paused, setPaused] = useState(false);
   const slide = SLIDES[index];
 
-  const go = useCallback(
-    (dir) => {
-      setDirection(dir);
-      setIndex((current) => (current + dir + SLIDES.length) % SLIDES.length);
-    },
-    []
-  );
+  const go = useCallback((dir) => {
+    setDirection(dir);
+    setIndex((current) => (current + dir + SLIDES.length) % SLIDES.length);
+  }, []);
 
   useEffect(() => {
     if (reduce || paused) return undefined;
@@ -87,7 +49,7 @@ export default function Events() {
   }, [go, paused, reduce]);
 
   return (
-    <section className="events" id="events" aria-label="SeeGrowth events">
+    <section className="events" id="events" aria-label="Community events">
       <div className="events-intro">
         <h2 className="events-headline">
           <span className="events-headline__line">Events built to</span>
@@ -107,11 +69,6 @@ export default function Events() {
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
-        <div className="events-brand" aria-hidden="true">
-          <span>SeeGrowth</span>
-          <i />
-        </div>
-
         <div className="events-stage">
           <button
             type="button"
@@ -183,7 +140,7 @@ export default function Events() {
 function Panel({ panel, side, reduce }) {
   return (
     <motion.figure
-      className={`events-panel${panel.object ? ' events-panel--object' : ''}`}
+      className="events-panel"
       initial={reduce ? false : { opacity: 0, scale: 0.96, y: side === 'left' ? 18 : -18 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ duration: 0.65, delay: side === 'left' ? 0.08 : 0.16, ease }}

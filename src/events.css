@@ -47,37 +47,9 @@
   max-width: 1120px;
   margin: 0 auto;
   border-radius: 28px;
-  padding: 28px 18px 18px;
+  padding: 22px 18px 18px;
   overflow: hidden;
   box-shadow: 0 22px 60px rgba(10, 10, 10, 0.18);
-}
-
-.events-brand {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 18px 14px;
-  color: rgba(255, 255, 255, 0.88);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.events-brand i {
-  width: 42px;
-  height: 10px;
-  background:
-    linear-gradient(
-      90deg,
-      #fff 0 22%,
-      transparent 22% 34%,
-      #fff 34% 56%,
-      transparent 56% 68%,
-      #fff 68% 90%,
-      transparent 90%
-    );
-  opacity: 0.9;
 }
 
 .events-stage {
@@ -119,19 +91,6 @@
   object-fit: cover;
   object-position: center;
   display: block;
-}
-
-.events-panel--object {
-  padding: 8%;
-}
-
-.events-panel--object img {
-  object-fit: contain;
-  max-width: 78%;
-  max-height: 78%;
-  width: auto;
-  height: auto;
-  filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.28));
 }
 
 .events-nav {
