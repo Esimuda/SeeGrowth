@@ -37,15 +37,6 @@ export default function Services() {
   return (
     <section className="services services-bento" id="services">
       <div className="services-intro">
-        <motion.span
-          className="services-kicker"
-          initial={reduce ? false : { opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={viewport}
-          transition={{ duration: 0.5, ease }}
-        >
-          Services
-        </motion.span>
         <h2 className="services-headline">
           <span className="services-headline__line">Services built to</span>
           <span className="services-headline__line">
