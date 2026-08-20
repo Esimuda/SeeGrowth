@@ -375,7 +375,7 @@
 
 .hero-slot--users {
   left: 5.2%;
-  bottom: 8.5%;
+  bottom: 14%;
 }
 
 .hero-card {
@@ -497,7 +497,7 @@
     width: 90vw;
   }
 
-  .hero-slot--users { left: 3%; bottom: 6%; }
+  .hero-slot--users { left: 3%; bottom: 11%; }
   .hero-scribble { right: 10%; top: 24%; }
   .hero-card--users { width: 240px; min-width: 0; }
 }
