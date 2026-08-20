@@ -640,21 +640,15 @@
     position: relative;
   }
 
-  .hero-scribble {
-    order: 2;
-    width: 120px;
-    margin: 4px 0 8px auto;
-  }
-
   .hero-person {
-    order: 3;
+    order: 2;
     inset: auto;
     height: min(340px, 48vh);
     width: min(100%, 300px);
     margin: 0 auto;
   }
 
-  .hero-slot--users { order: 4; margin: 8px 0; }
+  .hero-slot--users { order: 3; margin: 8px 0; }
 
   .hero-card--users {
     width: 100%;
