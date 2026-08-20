@@ -61,16 +61,18 @@ export default function Services() {
           transition={{ duration: 0.65, delay: 0.08, ease }}
           whileHover={reduce ? undefined : { y: -4 }}
         >
-          <svg className="services-feature-mark" viewBox="0 0 220 420" aria-hidden="true">
-            <defs>
-              <pattern id="svc-grid" width="28" height="28" patternUnits="userSpaceOnUse">
-                <path d="M28 0H0V28" fill="none" stroke="rgba(255,255,255,0.12)" strokeWidth="1" />
-              </pattern>
-            </defs>
-            <rect width="220" height="420" fill="url(#svc-grid)" />
-            <path d="M18 390 C70 310, 90 240, 120 160 S180 40, 202 12" fill="none" stroke="rgba(255,255,255,0.28)" strokeWidth="2.2" strokeLinecap="round" />
-            <circle cx="202" cy="12" r="5" fill="#fff" />
-          </svg>
+          <img
+            className="services-feature-bg"
+            src="/assets/service-feature.webp"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            className="services-feature-spiral"
+            src="/assets/growth-spiral.svg"
+            alt=""
+            aria-hidden="true"
+          />
 
           <div className="services-feature-top">
             <p>Tailored solutions / For every protocol</p>
@@ -85,7 +87,6 @@ export default function Services() {
 
           <div className="services-feature-foot">
             <p>Your partner in visible growth</p>
-            <span>SeeGrowth</span>
           </div>
         </motion.a>
 
