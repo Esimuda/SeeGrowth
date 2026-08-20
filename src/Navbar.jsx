@@ -37,7 +37,6 @@ const SEARCH_INDEX = [
 export default function Navbar() {
   const reduce = useReducedMotion();
   const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [query, setQuery] = useState('');
 
@@ -57,18 +56,15 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = menuOpen || searchOpen ? 'hidden' : '';
+    document.body.style.overflow = searchOpen ? 'hidden' : '';
     return () => {
       document.body.style.overflow = '';
     };
-  }, [menuOpen, searchOpen]);
+  }, [searchOpen]);
 
   useEffect(() => {
     const onKey = (e) => {
-      if (e.key === 'Escape') {
-        setMenuOpen(false);
-        setSearchOpen(false);
-      }
+      if (e.key === 'Escape') setSearchOpen(false);
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
         e.preventDefault();
         setSearchOpen(true);
@@ -79,7 +75,6 @@ export default function Navbar() {
   }, []);
 
   const closeAll = () => {
-    setMenuOpen(false);
     setSearchOpen(false);
     setQuery('');
   };
@@ -107,62 +102,12 @@ export default function Navbar() {
           <button
             className="nav-icon-btn"
             aria-label="Search the site"
-            onClick={() => {
-              setSearchOpen(true);
-              setMenuOpen(false);
-            }}
+            onClick={() => setSearchOpen(true)}
           >
             <SearchIcon />
           </button>
-          <button
-            className={`hamburger${menuOpen ? ' open' : ''}`}
-            id="hamburger"
-            aria-label="Toggle menu"
-            aria-expanded={menuOpen}
-            onClick={() => {
-              setMenuOpen((v) => !v);
-              setSearchOpen(false);
-            }}
-          >
-            <span />
-            <span />
-            <span />
-          </button>
         </div>
       </motion.nav>
-
-      <AnimatePresence>
-        {menuOpen && (
-          <motion.div
-            className="mobile-nav open site-mobile-nav"
-            id="mobileNav"
-            initial={reduce ? false : { opacity: 0, y: -12 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -12 }}
-            transition={{ duration: 0.28 }}
-          >
-            <ul>
-              {NAV_LINKS.map((link, i) => (
-                <motion.li
-                  key={link.href}
-                  initial={reduce ? false : { opacity: 0, x: -16 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.04 * i }}
-                >
-                  <a href={link.href} onClick={closeAll}>
-                    {link.label}
-                  </a>
-                </motion.li>
-              ))}
-              <li>
-                <a href="#booking" className="btn-primary" onClick={closeAll}>
-                  Get Started →
-                </a>
-              </li>
-            </ul>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
       <AnimatePresence>
         {searchOpen && (
