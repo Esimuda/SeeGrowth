@@ -138,9 +138,9 @@
 }
 
 .benefits-card--right .benefits-card-media img {
-  object-fit: contain;
-  object-position: center;
-  transform: none;
+  object-fit: cover;
+  object-position: 62% 56%;
+  transform: scale(1.1);
 }
 
 .benefits-card:hover .benefits-card-media img {
@@ -148,7 +148,7 @@
 }
 
 .benefits-card--right:hover .benefits-card-media img {
-  transform: scale(1.08);
+  transform: scale(1.16);
 }
 
 .benefits-card-body {
