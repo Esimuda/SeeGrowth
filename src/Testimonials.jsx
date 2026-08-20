@@ -60,13 +60,6 @@ export default function Testimonials() {
     <section className="testimonials testimonials-showcase" id="testimonials">
       <div className="testimonials-layout">
         <div className="testimonials-copy">
-          <span className="testimonials-badge">
-            <span className="testimonials-badge__plus" aria-hidden="true">
-              +
-            </span>
-            Testimonials
-          </span>
-
           <h2 className="testimonials-headline">
             <span className="testimonials-headline__line">What clients say</span>
             <span className="testimonials-headline__line">
