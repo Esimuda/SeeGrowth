@@ -3,10 +3,10 @@ import { motion, useReducedMotion } from 'framer-motion';
 const HERO = {
   headline: 'We Help You See Growth',
   person: {
-    src: '/assets/hero-person-hd.webp',
+    src: '/assets/hero-person-hd.png',
     alt: 'Futuristic strategist in a white hood with an orange visor, centered in the SeeGrowth hero',
-    width: 1024,
-    height: 1024,
+    width: 904,
+    height: 986,
   },
   socialProof: {
     count: '200+',

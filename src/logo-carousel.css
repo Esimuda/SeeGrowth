@@ -8,11 +8,13 @@
 
 .logo-carousel {
   position: relative;
+  z-index: 6;
   overflow: hidden;
   background: #000;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  padding: 28px 0;
+  margin-top: -88px;
+  padding: 36px 0 28px;
 }
 
 .logo-carousel__fade {
@@ -79,7 +81,8 @@
 
 @media (max-width: 760px) {
   .logo-carousel {
-    padding: 22px 0;
+    margin-top: -52px;
+    padding: 28px 0 22px;
   }
 
   .logo-carousel__item {
