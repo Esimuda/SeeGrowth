@@ -408,11 +408,13 @@
 }
 
 .hero-art--right {
-  top: 50%;
-  right: max(1vw, calc(50% - 42rem));
-  transform: translateY(-42%);
-  width: min(42vw, 520px);
-  height: min(78vh, 720px);
+  top: 48%;
+  right: 0;
+  left: auto;
+  /* Slide ~42% of the asset off-canvas so it emerges from the right edge */
+  transform: translate(42%, -50%);
+  width: min(54vw, 620px);
+  height: min(96vh, 920px);
 }
 
 .hero-art--right img {
@@ -503,9 +505,10 @@
   }
 
   .hero-art--right {
-    width: min(46vw, 440px);
-    height: min(70vh, 620px);
-    right: 2%;
+    width: min(58vw, 520px);
+    height: min(88vh, 780px);
+    right: 0;
+    transform: translate(46%, -50%);
   }
 
   .hero-art--left {
@@ -537,8 +540,7 @@
   }
 
   .hero-headline,
-  .hero-person,
-  .hero-art--right {
+  .hero-person {
     position: relative;
     left: auto;
     right: auto;
@@ -555,6 +557,17 @@
     width: min(70vw, 280px);
     height: min(70vh, 420px);
     transform: translate(-48%, -50%);
+    opacity: 0.92;
+  }
+
+  .hero-art--right {
+    position: absolute;
+    top: 62%;
+    right: 0;
+    left: auto;
+    width: min(70vw, 280px);
+    height: min(70vh, 420px);
+    transform: translate(48%, -50%);
     opacity: 0.92;
   }
 
@@ -579,14 +592,6 @@
     width: min(100%, 270px);
     margin: 0 auto;
     z-index: 3;
-  }
-
-  .hero-art--right {
-    order: 3;
-    inset: auto;
-    height: min(220px, 32vh);
-    width: min(100%, 200px);
-    margin: 8px auto 0;
   }
 }
 

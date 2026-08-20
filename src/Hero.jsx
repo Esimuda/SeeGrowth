@@ -101,9 +101,9 @@ export default function Hero() {
 
         <motion.div
           className="hero-art hero-art--right"
-          initial={reduce ? false : { opacity: 0, x: 36, scale: 0.94 }}
-          animate={{ opacity: 1, x: 0, scale: 1 }}
-          transition={{ duration: 1, delay: 0.22, ease }}
+          initial={reduce ? false : { opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.05, delay: 0.22, ease }}
           aria-hidden="true"
         >
           <img
