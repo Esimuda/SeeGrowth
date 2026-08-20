@@ -49,9 +49,9 @@
   border-radius: 28px;
   padding: 22px 18px 18px;
   overflow: hidden;
-  background: linear-gradient(145deg, #F26419 0%, #ff8a3d 45%, #e05510 100%);
+  background: linear-gradient(145deg, #c44a0e 0%, #a33d0c 48%, #7a2e09 100%);
   border: 0;
-  box-shadow: 0 22px 60px rgba(242, 100, 25, 0.28);
+  box-shadow: 0 22px 60px rgba(122, 46, 9, 0.35);
 }
 
 .events-stage {
