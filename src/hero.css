@@ -36,6 +36,7 @@
 .site-nav .logo-img {
   height: var(--logo-h);
   width: auto;
+  filter: contrast(1.1) saturate(1.14);
 }
 
 .site-nav .nav-links {
