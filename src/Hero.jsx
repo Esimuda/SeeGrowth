@@ -1,6 +1,12 @@
 import { motion, useReducedMotion } from 'framer-motion';
 
 const HERO = {
+  person: {
+    src: '/assets/hero-person-hd.png',
+    alt: 'Futuristic strategist in a white hood with an orange visor, centered in the SeeGrowth hero',
+    width: 904,
+    height: 986,
+  },
   leftArt: {
     src: '/assets/hero-glass-fan.webp',
     width: 1000,
@@ -40,7 +46,6 @@ export default function Hero() {
             alt=""
             width={HERO.leftArt.width}
             height={HERO.leftArt.height}
-            fetchPriority="high"
             decoding="async"
             draggable={false}
           />
@@ -77,6 +82,22 @@ export default function Hero() {
             );
           })}
         </h1>
+
+        <motion.div
+          className="hero-person"
+          initial={reduce ? false : { opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.95, delay: 0.28, ease }}
+        >
+          <img
+            src={HERO.person.src}
+            alt={HERO.person.alt}
+            width={HERO.person.width}
+            height={HERO.person.height}
+            fetchPriority="high"
+            decoding="async"
+          />
+        </motion.div>
 
         <motion.div
           className="hero-art hero-art--right"
