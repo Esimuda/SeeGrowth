@@ -93,14 +93,14 @@ export default function Events() {
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
-        <video
-          className="events-shell-video"
-          src="/assets/events/events-shell-bg.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
+        <img
+          className="events-shell-bg"
+          src="/assets/events/events-shell-bg.png"
+          alt=""
+          width={1024}
+          height={575}
+          decoding="async"
+          draggable={false}
           aria-hidden="true"
         />
         <div className="events-stage">
