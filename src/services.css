@@ -39,11 +39,11 @@
 
 .services-headline {
   font-family: var(--font-display);
-  font-size: clamp(22px, 3.2vw, 34px);
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 0.98;
-  text-transform: uppercase;
+  font-size: clamp(20px, 2.1vw, 28px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+  text-transform: none;
   color: #111;
 }
 
@@ -54,6 +54,7 @@
 .services-headline em {
   font-style: normal;
   color: #F26419;
+  font-weight: 600;
 }
 
 .services-board {
