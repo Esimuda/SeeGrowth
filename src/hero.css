@@ -384,8 +384,8 @@
   position: absolute;
   inset: 0;
   z-index: 2;
-  width: min(64vw, 820px);
-  height: min(92vh, 980px);
+  width: min(52vw, 660px);
+  height: min(74vh, 780px);
   margin: auto;
   display: flex;
   align-items: center;
@@ -598,8 +598,8 @@
   }
 
   .hero-person {
-    width: min(68vw, 620px);
-    height: min(78vh, 760px);
+    width: min(56vw, 500px);
+    height: min(64vh, 600px);
   }
 
   .hero-slot--users { left: 3%; bottom: 11%; }
@@ -655,8 +655,8 @@
   .hero-person {
     order: 3;
     inset: auto;
-    height: min(420px, 58vh);
-    width: min(100%, 360px);
+    height: min(340px, 48vh);
+    width: min(100%, 300px);
     margin: 0 auto;
   }
 
