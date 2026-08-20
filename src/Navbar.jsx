@@ -1,15 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 
-export const NAV_LINKS = [
-  { label: 'Home', href: '#home' },
-  { label: 'Services', href: '#services' },
-  { label: 'Case Studies', href: '#case-studies' },
-  { label: 'Our Story', href: '#testimonials' },
-  { label: 'Contact', href: '#booking' },
-  { label: 'Learn & Support', href: '#faq' },
-];
-
 export const LOGO = {
   src: '/assets/seegrowth-logo.webp',
   alt: 'SeeGrowth',
@@ -98,14 +89,6 @@ export default function Navbar() {
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
         <Logo />
-
-        <ul className="nav-links">
-          {NAV_LINKS.map((link) => (
-            <li key={link.href}>
-              <a href={link.href}>{link.label}</a>
-            </li>
-          ))}
-        </ul>
 
         <div className="nav-actions">
           <button

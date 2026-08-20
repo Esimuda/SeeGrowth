@@ -457,11 +457,6 @@ button { font-family: var(--font-main); }
   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.5);
 }
 
-.navbar.site-nav,
-.navbar.site-nav.scrolled {
-  background-color: #ffffff;
-}
-
 .navbar.site-nav .nav-links a::after {
   display: none;
 }
