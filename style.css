@@ -1206,10 +1206,10 @@ button { font-family: var(--font-main); }
 .booking-panel__sub {
   margin: 0;
   font-family: var(--font-main);
-  font-size: clamp(15px, 1.5vw, 17px);
-  line-height: 1.55;
-  color: rgba(255, 255, 255, 0.78);
-  max-width: 36em;
+  font-size: clamp(13px, 1.2vw, 14px);
+  line-height: 1.5;
+  color: #fff;
+  max-width: 32em;
 }
 
 .booking-panel__cta {
