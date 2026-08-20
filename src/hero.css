@@ -270,31 +270,47 @@
 
 /* ---- Hero canvas: 1440 × 900 language ---- */
 .hero.hero-bento {
+  position: relative;
   min-height: 100vh;
   min-height: 100dvh;
   padding: 0;
   display: block;
   background: #000;
   overflow: hidden;
+  isolation: isolate;
 }
 
 .hero.hero-bento::before {
-  content: none;
-  display: none;
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url('/assets/hero-bg.webp') center / cover no-repeat;
+  filter: blur(7px) saturate(1.14) contrast(1.08) brightness(0.9);
+  transform: scale(1.06);
+  pointer-events: none;
+}
+
+.hero.hero-bento::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.34) 42%, rgba(0, 0, 0, 0.68) 100%),
+    radial-gradient(ellipse at 50% 18%, rgba(0, 0, 0, 0.22) 0%, transparent 58%);
 }
 
 .hero.hero-bento > .hero-glow,
 .hero.hero-bento > .hero-watermark {
   position: absolute;
+  z-index: 1;
 }
 
 .hero.hero-bento > .hero-stage {
   position: relative;
-  z-index: 1;
-}
-
-.hero-bento::before {
-  display: none;
+  z-index: 2;
 }
 
 .hero-glow {
@@ -303,9 +319,9 @@
   left: -8%;
   width: 52%;
   height: 58%;
-  background: radial-gradient(ellipse at 30% 20%, rgba(242, 100, 25, 0.28) 0%, rgba(242, 100, 25, 0.08) 38%, transparent 70%);
+  background: radial-gradient(ellipse at 30% 20%, rgba(242, 100, 25, 0.16) 0%, rgba(242, 100, 25, 0.05) 38%, transparent 70%);
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
   filter: blur(8px);
 }
 
@@ -320,14 +336,14 @@
   letter-spacing: -0.04em;
   color: #fff;
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
   user-select: none;
   white-space: nowrap;
 }
 
 .hero-stage {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   min-height: 100vh;
   min-height: 100dvh;
@@ -340,7 +356,7 @@
   transform: translateX(-50%);
   width: min(92vw, 1100px);
   margin: 0;
-  z-index: 2;
+  z-index: 3;
   font-family: 'Outfit', var(--font-main);
   font-size: clamp(32px, 4.85vw, 72px);
   font-weight: 700;
@@ -349,6 +365,7 @@
   text-align: center;
   color: var(--white);
   pointer-events: none;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
 }
 
 .hero-word {
