@@ -93,16 +93,6 @@ export default function Events() {
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
-        <img
-          className="events-shell-bg"
-          src="/assets/events/events-shell-bg.png"
-          alt=""
-          width={1024}
-          height={575}
-          decoding="async"
-          draggable={false}
-          aria-hidden="true"
-        />
         <div className="events-stage">
           <button
             type="button"
