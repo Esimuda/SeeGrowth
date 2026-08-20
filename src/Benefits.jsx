@@ -11,7 +11,7 @@ const CARDS = [
   {
     id: 'roi',
     src: '/assets/benefit-roi.webp',
-    alt: 'Red ladder leaning against a silver ampersand symbol, representing growth and maximizing returns',
+    alt: 'Editorial portrait in geometric red headwear and garment, representing precision and maximizing returns',
     title: 'Maximize ROI',
     href: '#services',
   },
