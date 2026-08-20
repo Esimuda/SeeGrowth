@@ -11,7 +11,7 @@ const CARDS = [
   {
     id: 'roi',
     src: '/assets/benefit-roi.jpg',
-    alt: 'Performance analytics dashboard showing bounce rate, sessions, and ROI metrics',
+    alt: 'Dark trading desk with orange growth charts across monitors, laptop, and tablet',
     title: 'Maximize ROI',
     href: '#services',
   },
