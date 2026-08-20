@@ -814,28 +814,53 @@ button { font-family: var(--font-main); }
    9. CASE STUDIES SECTION
    ---------------------------------------------------------------- */
 .case-studies {
-  padding: clamp(72px, 9vw, 110px) 52px;
-  background: var(--orange);
+  padding: 88px 5.5% 96px;
+  background: #f3f1ee;
+  color: #111;
   overflow: hidden;
 }
 
 .cases-inner {
   position: relative;
   z-index: 1;
-  max-width: 1180px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
+.cases-intro {
+  max-width: 1120px;
+  margin: 0 auto 36px;
+  text-align: left;
+}
+
 .cases-headline {
-  margin: 0 auto 42px;
-  max-width: 18ch;
+  margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(28px, 3.6vw, 46px);
-  font-weight: 700;
-  line-height: 1.15;
+  font-size: clamp(20px, 2.1vw, 28px);
+  font-weight: 600;
   letter-spacing: -0.03em;
-  text-align: center;
-  color: var(--white);
+  line-height: 1.25;
+  text-align: left;
+  color: #111;
+}
+
+.cases-headline__line {
+  display: block;
+}
+
+.cases-headline em {
+  font-style: normal;
+  color: var(--orange);
+  font-weight: 600;
+}
+
+.cases-sub {
+  margin-top: 12px;
+  max-width: 38em;
+  font-family: var(--font-main);
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(17, 17, 17, 0.68);
 }
 
 .cases-grid {
@@ -943,8 +968,8 @@ button { font-family: var(--font-main); }
     margin-inline: auto;
   }
 
-  .cases-headline {
-    max-width: 22ch;
+  .cases-intro {
+    text-align: left;
   }
 }
 
@@ -1479,7 +1504,7 @@ button { font-family: var(--font-main); }
   .booking,
   .faq { padding: 80px 24px; }
 
-  .case-studies { padding: 70px 24px; }
+  .case-studies { padding: 72px 24px 80px; }
 
   .cases-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; gap: 18px; }
 
