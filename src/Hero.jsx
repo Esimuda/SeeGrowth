@@ -60,7 +60,7 @@ export default function Hero() {
             href={HERO.socialProof.href}
             className="hero-card hero-card--users"
             animate={reduce ? undefined : floatAnim(1.1, 12)}
-            whileHover={reduce ? undefined : { y: -10, boxShadow: '0 18px 50px rgba(242,100,25,0.35)' }}
+            whileHover={reduce ? undefined : { y: -10, boxShadow: '0 22px 56px rgba(242,100,25,0.42), inset 0 1px 0 rgba(255,255,255,0.24)' }}
           >
             <motion.span
               className="users-go"
