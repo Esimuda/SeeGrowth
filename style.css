@@ -889,7 +889,8 @@ button { font-family: var(--font-main); }
   box-shadow: none;
 }
 
-.cases-card__img {
+.cases-card__img,
+.cases-card__media {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -899,7 +900,13 @@ button { font-family: var(--font-main); }
   transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.cases-card:hover .cases-card__img {
+.cases-card__media {
+  pointer-events: none;
+  border: 0;
+}
+
+.cases-card:hover .cases-card__img,
+.cases-card:hover .cases-card__media {
   transform: scale(1.04);
 }
 
