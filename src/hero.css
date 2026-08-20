@@ -390,6 +390,10 @@
   color: var(--orange);
 }
 
+.hero-word--period {
+  margin-left: -0.18em;
+}
+
 .hero-person {
   position: absolute;
   top: calc(var(--hero-headline-top) + var(--hero-headline-offset));
