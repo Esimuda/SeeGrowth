@@ -127,10 +127,14 @@ export default function EventVideo() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
             >
-              <span className="event-video-play-glass" aria-hidden="true" />
-              <svg className="event-video-play-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M9 7.5v9l8-4.5-8-4.5z" fill="currentColor" />
-              </svg>
+              <img
+                className="event-video-play-img"
+                src="/assets/events/play-button.png"
+                alt=""
+                width={92}
+                height={92}
+                draggable={false}
+              />
             </motion.button>
           )}
         </AnimatePresence>
