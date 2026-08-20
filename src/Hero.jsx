@@ -12,6 +12,11 @@ const HERO = {
     width: 900,
     height: 1224,
   },
+  rightArt: {
+    src: '/assets/hero-glass-jack.png',
+    width: 903,
+    height: 1024,
+  },
 };
 
 const HEADLINE = [
@@ -91,6 +96,23 @@ export default function Hero() {
             height={HERO.person.height}
             fetchPriority="high"
             decoding="async"
+          />
+        </motion.div>
+
+        <motion.div
+          className="hero-art hero-art--right"
+          initial={reduce ? false : { opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.05, delay: 0.22, ease }}
+          aria-hidden="true"
+        >
+          <img
+            src={HERO.rightArt.src}
+            alt=""
+            width={HERO.rightArt.width}
+            height={HERO.rightArt.height}
+            decoding="async"
+            draggable={false}
           />
         </motion.div>
       </div>
