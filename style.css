@@ -1195,6 +1195,11 @@ button { font-family: var(--font-main); }
   font-weight: 700;
   letter-spacing: -0.035em;
   line-height: 1.15;
+  color: #fff;
+}
+
+.booking-panel__title em {
+  font-style: normal;
   color: var(--orange);
 }
 
