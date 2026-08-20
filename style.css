@@ -1552,20 +1552,6 @@ button { font-family: var(--font-main); }
   color: rgba(17, 17, 17, 0.45);
 }
 
-.footer-bottom__link {
-  font-family: var(--font-main);
-  font-size: 13px;
-  font-weight: 600;
-  color: #111;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  transition: color var(--transition);
-}
-
-.footer-bottom__link:hover {
-  color: var(--orange);
-}
-
 
 /* ----------------------------------------------------------------
    15. RESPONSIVE — Tablet (≤ 960px)
