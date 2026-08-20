@@ -13,7 +13,7 @@ const CARDS = [
   {
     id: 'roi',
     src: '/assets/benefit-roi.jpg',
-    alt: 'Analytics dashboard tracking campaign performance and revenue growth',
+    alt: 'Performance analytics dashboard showing bounce rate, sessions, and ROI metrics',
     title: 'Maximize ROI',
     href: '#services',
   },
