@@ -54,10 +54,15 @@ onReady(function () {
         return '<span class="word-wrap"><span class="word-inner">' + word + '</span></span>';
       }).join(' ');
     }).join('');
+    el.classList.add('is-prepared');
   }
 
   if (!reduced) {
     document.querySelectorAll('.split-title').forEach(splitTitle);
+  } else {
+    document.querySelectorAll('.split-title').forEach(function (el) {
+      el.classList.add('is-prepared');
+    });
   }
 
   /* Stagger word-inners after the parent becomes .is-visible */

@@ -224,6 +224,10 @@ button { font-family: var(--font-main); }
 .stagger-children.is-visible > *:nth-child(8) { transition-delay: 770ms; }
 
 /* ── 10. SPLIT-TEXT WORD ANIMATION ────────────────────────────── */
+.split-title:not(.is-prepared) {
+  visibility: hidden;
+}
+
 /* Each .word-wrap is a span wrapping one word, clipping children  */
 .word-wrap {
   display: inline-block;

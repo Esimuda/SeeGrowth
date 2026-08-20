@@ -32,8 +32,19 @@ createRoot(document.getElementById('benefits-root')).render(
   </StrictMode>
 );
 
+function markAppReady() {
+  document.body.classList.remove('is-loading');
+  document.body.classList.add('app-ready');
+  const loader = document.getElementById('app-loader');
+  if (!loader) return;
+  const removeLoader = () => loader.remove();
+  loader.addEventListener('transitionend', removeLoader, { once: true });
+  window.setTimeout(removeLoader, 400);
+}
+
 requestAnimationFrame(function () {
   requestAnimationFrame(function () {
+    markAppReady();
     import('../script.js');
   });
 });
