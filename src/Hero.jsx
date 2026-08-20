@@ -13,7 +13,7 @@ const HERO = {
     height: 1224,
   },
   rightArt: {
-    src: '/assets/hero-glass-fan.webp',
+    src: '/assets/hero-glass-fan.webp?v=2',
     width: 1000,
     height: 1923,
   },

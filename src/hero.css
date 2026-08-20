@@ -411,14 +411,14 @@
   top: 48%;
   right: 0;
   left: auto;
-  /* Slide ~42% of the asset off-canvas so it emerges from the right edge */
-  transform: translate(42%, -50%);
-  width: min(54vw, 620px);
-  height: min(96vh, 920px);
+  /* Keep more of the graphic clipped by the right edge so it emerges from the side */
+  transform: translate(48%, -50%);
+  width: min(52vw, 580px);
+  height: min(92vh, 880px);
 }
 
 .hero-art--right img {
-  object-position: center left;
+  object-position: left center;
   filter:
     contrast(1.05)
     saturate(1.12)
@@ -505,10 +505,10 @@
   }
 
   .hero-art--right {
-    width: min(58vw, 520px);
-    height: min(88vh, 780px);
+    width: min(56vw, 500px);
+    height: min(86vh, 760px);
     right: 0;
-    transform: translate(46%, -50%);
+    transform: translate(50%, -50%);
   }
 
   .hero-art--left {
