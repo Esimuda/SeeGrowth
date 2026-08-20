@@ -17,8 +17,8 @@ const CARDS = [
   },
   {
     id: 'tailored',
-    src: '/assets/benefit-strategy.jpg',
-    alt: 'Refined product still-life for tailored brand and growth strategy',
+    src: '/assets/benefit-strategy.webp',
+    alt: 'Confident portrait in orange satin with dramatic lighting, representing tailored brand solutions',
     title: 'Tailored Solutions',
     href: '#services',
   },
