@@ -49,7 +49,13 @@
   border-radius: 28px;
   padding: 22px 18px 18px;
   overflow: hidden;
-  background: #0a0a0a;
+  background-color: #0a0a0a;
+  background-image: url('/assets/events/events-shell-bg.jpg');
+  background-image: url('/assets/events/events-shell-bg.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: auto;
   box-shadow: 0 22px 60px rgba(10, 10, 10, 0.18);
 }
 
@@ -66,7 +72,7 @@
   overflow: hidden;
   border-radius: 4px;
   aspect-ratio: 2 / 1.02;
-  background: #0a0a0a;
+  background: transparent;
 }
 
 .events-pair {
@@ -75,7 +81,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
-  background: #0a0a0a;
+  background: transparent;
   will-change: transform, opacity;
 }
 
@@ -87,7 +93,7 @@
   place-items: center;
   border: 0;
   padding: 0;
-  background: #0a0a0a;
+  background: transparent;
   cursor: zoom-in;
 }
 
