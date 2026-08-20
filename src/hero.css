@@ -554,8 +554,8 @@
     position: absolute;
     top: 58%;
     left: 0;
-    width: min(60vw, 240px);
-    height: min(60vh, 360px);
+    width: min(52vw, 210px);
+    height: min(52vh, 310px);
     transform: translate(-48%, -50%);
     opacity: 0.92;
   }
