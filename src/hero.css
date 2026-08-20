@@ -368,6 +368,29 @@
   color: var(--orange);
 }
 
+.hero-person {
+  position: absolute;
+  left: 50%;
+  top: 56%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  width: min(46vw, 480px);
+  height: min(72vh, 640px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.hero-person img {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center center;
+  filter: contrast(1.05) saturate(1.1) drop-shadow(0 0 36px rgba(242, 100, 25, 0.2));
+}
+
 .hero-slot {
   position: absolute;
   z-index: 5;
@@ -497,6 +520,12 @@
     width: 90vw;
   }
 
+  .hero-person {
+    top: 54%;
+    width: min(56vw, 420px);
+    height: min(64vh, 540px);
+  }
+
   .hero-slot--users { left: 3%; bottom: 11%; }
   .hero-scribble { right: 10%; top: 24%; }
   .hero-card--users { width: 240px; min-width: 0; }
@@ -517,6 +546,7 @@
   }
 
   .hero-headline,
+  .hero-person,
   .hero-slot,
   .hero-scribble {
     position: relative;
