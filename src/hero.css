@@ -416,11 +416,11 @@
 }
 
 .hero-art--right img {
-  object-position: center right;
+  object-position: center left;
   filter:
-    contrast(1.04)
-    saturate(1.1)
-    drop-shadow(0 18px 48px rgba(0, 0, 0, 0.35));
+    contrast(1.05)
+    saturate(1.12)
+    drop-shadow(0 20px 50px rgba(0, 0, 0, 0.4));
 }
 
 .hero-art--left {
@@ -435,9 +435,9 @@
 .hero-art--left img {
   object-position: center right;
   filter:
-    contrast(1.05)
-    saturate(1.12)
-    drop-shadow(0 20px 50px rgba(0, 0, 0, 0.4));
+    contrast(1.04)
+    saturate(1.1)
+    drop-shadow(0 18px 48px rgba(0, 0, 0, 0.35));
 }
 
 .hero-person {

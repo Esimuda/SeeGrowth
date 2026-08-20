@@ -8,14 +8,14 @@ const HERO = {
     height: 986,
   },
   leftArt: {
-    src: '/assets/hero-glass-fan.webp',
-    width: 1000,
-    height: 1923,
-  },
-  rightArt: {
     src: '/assets/hero-glass-rings.webp',
     width: 900,
     height: 1224,
+  },
+  rightArt: {
+    src: '/assets/hero-glass-fan.webp',
+    width: 1000,
+    height: 1923,
   },
 };
 
