@@ -430,8 +430,8 @@
   left: 0;
   /* Slide ~42% of the asset off-canvas so it emerges from the left edge */
   transform: translate(-42%, -50%);
-  width: min(54vw, 620px);
-  height: min(96vh, 920px);
+  width: min(46vw, 520px);
+  height: min(82vh, 780px);
 }
 
 .hero-art--left img {
@@ -512,8 +512,8 @@
   }
 
   .hero-art--left {
-    width: min(58vw, 520px);
-    height: min(88vh, 780px);
+    width: min(50vw, 440px);
+    height: min(76vh, 660px);
     transform: translate(-46%, -50%);
   }
 
@@ -554,8 +554,8 @@
     position: absolute;
     top: 58%;
     left: 0;
-    width: min(70vw, 280px);
-    height: min(70vh, 420px);
+    width: min(60vw, 240px);
+    height: min(60vh, 360px);
     transform: translate(-48%, -50%);
     opacity: 0.92;
   }
