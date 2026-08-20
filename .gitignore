@@ -3,3 +3,5 @@ dist
 .DS_Store
 *.local
 SeeGrowth-origin
+__pycache__
+public/assets/_cutout-preview.jpg

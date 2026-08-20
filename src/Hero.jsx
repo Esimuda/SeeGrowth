@@ -4,7 +4,7 @@ const HERO = {
   headline: 'We Help You See Growth',
   watermark: 'Growth',
   person: {
-    src: '/assets/hero-person.jpg',
+    src: '/assets/hero-person.webp',
     alt: 'Confident growth strategist in SeeGrowth orange, arms crossed and ready to scale your project',
   },
   appointment: {
@@ -80,7 +80,14 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1.05, delay: 0.28, ease }}
         >
-          <img src={HERO.person.src} alt={HERO.person.alt} />
+          <img
+            src={HERO.person.src}
+            alt={HERO.person.alt}
+            width={720}
+            height={1116}
+            fetchPriority="high"
+            decoding="async"
+          />
         </motion.div>
 
         <motion.div
