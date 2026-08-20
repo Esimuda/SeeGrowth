@@ -391,8 +391,8 @@
   position: absolute;
   inset: 0;
   z-index: 2;
-  width: min(44vw, 540px);
-  height: min(62vh, 640px);
+  width: min(36vw, 440px);
+  height: min(52vh, 520px);
   margin: auto;
   display: flex;
   align-items: center;
@@ -455,8 +455,8 @@
   }
 
   .hero-person {
-    width: min(56vw, 500px);
-    height: min(64vh, 600px);
+    width: min(44vw, 400px);
+    height: min(54vh, 480px);
   }
 }
 
