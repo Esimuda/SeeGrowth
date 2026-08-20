@@ -281,13 +281,13 @@
 /* ---- Hero canvas: 1440 × 900 language ---- */
 .hero.hero-bento {
   position: relative;
-  min-height: 100vh;
+  height: 100dvh;
+  max-height: 100dvh;
   min-height: 100dvh;
   padding: 0;
   display: block;
   background: #000;
-  overflow-x: hidden;
-  overflow-y: visible;
+  overflow: hidden;
   isolation: isolate;
   z-index: 1;
   --hero-headline-top: 16.5%;
