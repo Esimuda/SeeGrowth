@@ -1,29 +1,37 @@
 import { useCallback, useEffect, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 
-const PHOTOS = Array.from({ length: 18 }, (_, i) => {
+const PHOTO_COUNT = 28;
+
+const PHOTOS = Array.from({ length: PHOTO_COUNT }, (_, i) => {
   const n = String(i + 1).padStart(2, '0');
   return {
+    id: `photo-${n}`,
     src: `/assets/events/event-photo-${n}.webp`,
-    alt: `SeeGrowth community event photo ${i + 1}`,
+    alt: `Community event photo ${i + 1}`,
   };
 });
 
-const THEMES = [
-  { theme: '#F26419', shell: '#7a2e0f', label: 'Community nights' },
-  { theme: '#111111', shell: '#1a1212', label: 'Team tables' },
-  { theme: '#1f6b4a', shell: '#123528', label: 'Founders dinners' },
-  { theme: '#3d6ea5', shell: '#1d334d', label: 'On-stage moments' },
-  { theme: '#6b2d5b', shell: '#2d1528', label: 'Hacker house' },
-  { theme: '#8a4b1f', shell: '#3a2412', label: 'Builder meetups' },
-  { theme: '#2f4f4f', shell: '#1a2a2a', label: 'Alliance sessions' },
-  { theme: '#4a3f6b', shell: '#221c33', label: 'Partner rooms' },
-  { theme: '#5c3d2e', shell: '#2a1c16', label: 'After hours' },
+const LABELS = [
+  'Community nights',
+  'Team tables',
+  'Founders dinners',
+  'On-stage moments',
+  'Hacker house',
+  'Builder meetups',
+  'Alliance sessions',
+  'Partner rooms',
+  'After hours',
+  'Studio nights',
+  'Signal rooms',
+  'Growth circles',
+  'Launch tables',
+  'Field notes',
 ];
 
-const SLIDES = THEMES.map((theme, i) => ({
+const SLIDES = Array.from({ length: Math.floor(PHOTO_COUNT / 2) }, (_, i) => ({
   id: `slide-${i + 1}`,
-  ...theme,
+  label: LABELS[i % LABELS.length],
   left: PHOTOS[i * 2],
   right: PHOTOS[i * 2 + 1],
 }));
@@ -35,18 +43,35 @@ export default function Events() {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1);
   const [paused, setPaused] = useState(false);
+  const [lightbox, setLightbox] = useState(null);
   const slide = SLIDES[index];
+  const lightboxOpen = Boolean(lightbox);
 
   const go = useCallback((dir) => {
     setDirection(dir);
     setIndex((current) => (current + dir + SLIDES.length) % SLIDES.length);
   }, []);
 
+  const closeLightbox = useCallback(() => setLightbox(null), []);
+
   useEffect(() => {
-    if (reduce || paused) return undefined;
+    if (reduce || paused || lightboxOpen) return undefined;
     const id = window.setInterval(() => go(1), 4200);
     return () => window.clearInterval(id);
-  }, [go, paused, reduce]);
+  }, [go, paused, reduce, lightboxOpen]);
+
+  useEffect(() => {
+    if (!lightboxOpen) return undefined;
+    const onKey = (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    };
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', onKey);
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', onKey);
+    };
+  }, [lightboxOpen, closeLightbox]);
 
   return (
     <section className="events" id="events" aria-label="Community events">
@@ -62,10 +87,8 @@ export default function Events() {
         </p>
       </div>
 
-      <motion.div
+      <div
         className="events-shell"
-        animate={reduce ? undefined : { backgroundColor: slide.shell }}
-        transition={{ duration: 0.7, ease }}
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
@@ -90,10 +113,19 @@ export default function Events() {
                 animate="center"
                 exit="exit"
                 transition={{ duration: 0.72, ease }}
-                style={{ backgroundColor: slide.theme }}
               >
-                <Panel panel={slide.left} side="left" reduce={reduce} />
-                <Panel panel={slide.right} side="right" reduce={reduce} />
+                <Panel
+                  panel={slide.left}
+                  side="left"
+                  reduce={reduce}
+                  onOpen={() => setLightbox(slide.left)}
+                />
+                <Panel
+                  panel={slide.right}
+                  side="right"
+                  reduce={reduce}
+                  onOpen={() => setLightbox(slide.right)}
+                />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -132,21 +164,60 @@ export default function Events() {
             <span />
           </div>
         </div>
-      </motion.div>
+      </div>
+
+      <AnimatePresence>
+        {lightbox && (
+          <motion.div
+            className="events-lightbox"
+            role="dialog"
+            aria-modal="true"
+            aria-label={lightbox.alt}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.22 }}
+            onClick={closeLightbox}
+          >
+            <button
+              type="button"
+              className="events-lightbox-close"
+              aria-label="Close image"
+              onClick={closeLightbox}
+            >
+              <CloseIcon />
+            </button>
+
+            <motion.img
+              className="events-lightbox-image"
+              src={lightbox.src}
+              alt={lightbox.alt}
+              initial={reduce ? false : { opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.96 }}
+              transition={{ duration: 0.28, ease }}
+              onClick={(e) => e.stopPropagation()}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
 
-function Panel({ panel, side, reduce }) {
+function Panel({ panel, side, reduce, onOpen }) {
   return (
-    <motion.figure
+    <motion.button
+      type="button"
       className="events-panel"
       initial={reduce ? false : { opacity: 0, scale: 0.96, y: side === 'left' ? 18 : -18 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ duration: 0.65, delay: side === 'left' ? 0.08 : 0.16, ease }}
+      onClick={onOpen}
+      aria-label={`Open ${panel.alt}`}
     >
       <img src={panel.src} alt={panel.alt} />
-    </motion.figure>
+    </motion.button>
   );
 }
 
@@ -177,6 +248,19 @@ function Chevron({ dir }) {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function CloseIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path
+        d="M6 6l12 12M18 6L6 18"
+        stroke="currentColor"
+        strokeWidth="2.2"
+        strokeLinecap="round"
       />
     </svg>
   );

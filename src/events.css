@@ -49,6 +49,7 @@
   border-radius: 28px;
   padding: 22px 18px 18px;
   overflow: hidden;
+  background: #0a0a0a;
   box-shadow: 0 22px 60px rgba(10, 10, 10, 0.18);
 }
 
@@ -65,7 +66,7 @@
   overflow: hidden;
   border-radius: 4px;
   aspect-ratio: 2 / 1.02;
-  background: rgba(0, 0, 0, 0.18);
+  background: #0a0a0a;
 }
 
 .events-pair {
@@ -74,6 +75,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
+  background: #0a0a0a;
   will-change: transform, opacity;
 }
 
@@ -83,6 +85,10 @@
   overflow: hidden;
   display: grid;
   place-items: center;
+  border: 0;
+  padding: 0;
+  background: #0a0a0a;
+  cursor: zoom-in;
 }
 
 .events-panel img {
@@ -91,6 +97,13 @@
   object-fit: cover;
   object-position: center;
   display: block;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+.events-panel:focus-visible {
+  outline: 2px solid #F26419;
+  outline-offset: -2px;
 }
 
 .events-nav {
@@ -164,6 +177,53 @@
   height: 100%;
   background: #fff;
   opacity: 0.85;
+}
+
+.events-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1400;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.events-lightbox-image {
+  max-width: min(1100px, 94vw);
+  max-height: min(86vh, 860px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+}
+
+.events-lightbox-close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.events-lightbox-close:hover {
+  background: #F26419;
+  transform: scale(1.05);
 }
 
 @media (max-width: 860px) {
