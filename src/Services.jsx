@@ -3,8 +3,8 @@ import { motion, useReducedMotion } from 'framer-motion';
 const ROWS = [
   {
     id: 'paid',
-    src: '/assets/service-paid.webp',
-    alt: 'Overhead view of an athlete serving on a terracotta court',
+    src: '/assets/service-paid-rocket.webp',
+    alt: 'Iridescent 3D rocket launching, representing paid traffic that converts',
     title: 'Paid traffic that finds wallets ready to convert',
     meta: 'Always on',
     href: '#booking',
