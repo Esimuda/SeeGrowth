@@ -5,7 +5,7 @@ const HERO = {
   watermark: 'Growth',
   person: {
     src: '/assets/hero-person.webp',
-    alt: 'Confident growth strategist in SeeGrowth orange, arms crossed and ready to scale your project',
+    alt: 'Futuristic strategist wearing an orange visor, lit by SeeGrowth brand glow',
   },
   socialProof: {
     count: '200+',
@@ -73,8 +73,8 @@ export default function Hero() {
           <img
             src={HERO.person.src}
             alt={HERO.person.alt}
-            width={720}
-            height={1116}
+            width={699}
+            height={846}
             fetchPriority="high"
             decoding="async"
           />
