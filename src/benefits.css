@@ -134,10 +134,10 @@
 }
 
 .benefits-card--right .benefits-card-media img {
-  object-position: 50% 88%;
+  object-position: 50% 58%;
   /* Match the hovered coverage at rest so top edges stay filled */
-  transform: scale(1.08);
-  transform-origin: center 70%;
+  transform: scale(1.1);
+  transform-origin: center 58%;
 }
 
 .benefits-card:hover .benefits-card-media img {
@@ -145,7 +145,7 @@
 }
 
 .benefits-card--right:hover .benefits-card-media img {
-  transform: scale(1.12);
+  transform: scale(1.14);
 }
 
 .benefits-card-body {
