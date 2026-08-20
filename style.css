@@ -1291,7 +1291,7 @@ button { font-family: var(--font-main); }
 
 .faq-headline em {
   font-style: normal;
-  color: #111;
+  color: var(--orange);
 }
 
 .faq-lead {
