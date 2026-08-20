@@ -27,10 +27,6 @@ const HERO = {
     { value: '30%', label: 'Revenue growth' },
     { value: '3', label: 'Core services' },
   ],
-  info: {
-    title: 'Web3 Growth Studio',
-    body: 'Enabling sustainable growth for Web3 and AI projects with data-driven marketing — paid traffic, branding, and content strategy that actually works. See growth. Scale smart. Grow global.',
-  },
 };
 
 const ease = [0.22, 1, 0.36, 1];
@@ -199,22 +195,6 @@ export default function Hero() {
               </div>
             ))}
           </motion.div>
-        </motion.div>
-
-        <motion.div
-          className="hero-slot hero-slot--info"
-          initial={reduce ? false : { opacity: 0, x: 32, y: 18 }}
-          animate={{ opacity: 1, x: 0, y: 0 }}
-          transition={{ duration: 0.75, delay: 0.95, ease }}
-        >
-          <motion.article
-            className="hero-card hero-card--info"
-            animate={reduce ? undefined : floatAnim(1.6, 9)}
-            whileHover={reduce ? undefined : { y: -8, boxShadow: '0 20px 48px rgba(0,0,0,0.45)' }}
-          >
-            <h2>{HERO.info.title}</h2>
-            <p>{HERO.info.body}</p>
-          </motion.article>
         </motion.div>
       </div>
     </section>

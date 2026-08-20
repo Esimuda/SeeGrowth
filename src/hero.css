@@ -313,11 +313,6 @@
   top: 36%;
 }
 
-.hero-slot--info {
-  right: 5.4%;
-  bottom: 10%;
-}
-
 .hero-card {
   display: block;
   color: inherit;
@@ -486,28 +481,6 @@
   color: rgba(255, 255, 255, 0.55);
 }
 
-.hero-card--info {
-  width: min(320px, 26vw);
-  min-width: 240px;
-  background: #1c1c1c;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 22px 22px 20px;
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
-}
-
-.hero-card--info h2 {
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 8px;
-  color: var(--white);
-}
-
-.hero-card--info p {
-  font-size: 12.5px;
-  line-height: 1.55;
-  color: rgba(255, 255, 255, 0.55);
-}
-
 @media (max-width: 1100px) {
   .navbar.site-nav {
     height: auto;
@@ -542,10 +515,8 @@
   .hero-slot--appt { left: 4%; top: 36%; }
   .hero-slot--users { left: 3%; bottom: 6%; }
   .hero-slot--stats { right: 4%; top: 34%; }
-  .hero-slot--info { right: 3%; bottom: 7%; }
   .hero-scribble { right: 10%; top: 24%; }
-  .hero-card--users,
-  .hero-card--info { width: 240px; min-width: 0; }
+  .hero-card--users { width: 240px; min-width: 0; }
 }
 
 @media (max-width: 760px) {
@@ -613,10 +584,8 @@
   }
   .hero-slot--appt { order: 5; margin: 8px 0; }
   .hero-slot--users { order: 6; margin: 8px 0; }
-  .hero-slot--info { order: 7; margin: 8px 0; }
 
   .hero-card--users,
-  .hero-card--info,
   .hero-card--appt {
     width: 100%;
     min-width: 0;
