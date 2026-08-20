@@ -12,8 +12,8 @@ const ROWS = [
   },
   {
     id: 'brand',
-    src: '/assets/service-brand.webp',
-    alt: 'Hands typing on a laptop during a branding and design session',
+    src: '/assets/service-brand-star.webp',
+    alt: 'Iridescent 3D star burst, representing brand systems at every touchpoint',
     title: 'Brand systems that look inevitable at every touchpoint',
     meta: 'Q2 2026',
     href: '#booking',
