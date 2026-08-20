@@ -39,7 +39,7 @@ function markAppReady() {
   if (!loader) return;
   const removeLoader = () => loader.remove();
   loader.addEventListener('transitionend', removeLoader, { once: true });
-  window.setTimeout(removeLoader, 400);
+  window.setTimeout(removeLoader, 550);
 }
 
 requestAnimationFrame(function () {
