@@ -412,7 +412,7 @@
   right: 0;
   left: auto;
   /* Shift further right so the page edge hides more of the graphic */
-  transform: translate(64%, -50%);
+  transform: translate(58%, -50%);
   width: min(36vw, 420px);
   height: auto;
   aspect-ratio: 900 / 1600;
@@ -514,7 +514,7 @@
     height: auto;
     aspect-ratio: 900 / 1600;
     right: 0;
-    transform: translate(66%, -50%);
+    transform: translate(60%, -50%);
   }
 
   .hero-art--left {
@@ -574,7 +574,7 @@
     width: min(48vw, 220px);
     height: auto;
     aspect-ratio: 900 / 1600;
-    transform: translate(60%, -50%);
+    transform: translate(55%, -50%);
     opacity: 0.92;
   }
 
