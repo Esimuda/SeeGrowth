@@ -576,7 +576,14 @@
     margin: 4px 0 8px auto;
   }
 
-  .hero-slot--users { order: 3; margin: 8px 0; }
+  .hero-person {
+    order: 3;
+    height: min(400px, 55vh);
+    width: min(100%, 320px);
+    margin: 0 auto;
+  }
+
+  .hero-slot--users { order: 4; margin: 8px 0; }
 
   .hero-card--users {
     width: 100%;

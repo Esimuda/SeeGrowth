@@ -1000,7 +1000,7 @@ button { font-family: var(--font-main); }
 
 .deck-logo {
   display: block;
-  height: 14px;
+  height: 11px;
   width: auto;
   filter: contrast(1.08) saturate(1.12);
 }
