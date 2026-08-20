@@ -1303,14 +1303,15 @@ button { font-family: var(--font-main); }
   color: rgba(17, 17, 17, 0.62);
 }
 
-.faq-intro-cta {
+.faq .faq-intro .faq-intro-cta {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   margin-top: 24px;
   padding: 12px 18px;
   border-radius: var(--radius-btn);
-  background: #111;
+  background: #111 !important;
+  border: 2px solid #111;
   color: #fff;
   font-family: var(--font-main);
   font-size: 14px;
@@ -1319,8 +1320,9 @@ button { font-family: var(--font-main); }
   transition: background 0.25s ease, transform 0.25s ease;
 }
 
-.faq-intro-cta:hover {
-  background: #000;
+.faq .faq-intro .faq-intro-cta:hover {
+  background: #000 !important;
+  border-color: #000;
   transform: translateY(-1px);
 }
 
