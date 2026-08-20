@@ -291,7 +291,7 @@
   isolation: isolate;
   z-index: 1;
   --hero-headline-top: 16.5%;
-  --hero-headline-offset: 13.5rem;
+  --hero-headline-offset: 12rem;
 }
 
 .hero.hero-bento::before {
@@ -461,7 +461,7 @@
 
   .hero.hero-bento {
     --hero-headline-top: 14%;
-    --hero-headline-offset: 10.5rem;
+    --hero-headline-offset: 9.25rem;
   }
 
   .hero-person {
@@ -500,7 +500,7 @@
     width: 100%;
     font-size: 34px;
     pointer-events: auto;
-    margin-bottom: 28px;
+    margin-bottom: 18px;
     transform: none;
     left: auto;
     top: auto;
@@ -511,8 +511,8 @@
     order: 2;
     inset: auto;
     top: auto;
-    height: min(260px, 40vh);
-    width: min(100%, 240px);
+    height: min(290px, 44vh);
+    width: min(100%, 270px);
     margin: 0 auto;
   }
 }
