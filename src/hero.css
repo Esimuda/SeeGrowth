@@ -382,11 +382,12 @@
 
 .hero-person {
   position: absolute;
-  inset: 0;
+  left: 50%;
+  bottom: -72px;
+  transform: translateX(-50%);
   z-index: 2;
   width: min(44vw, 540px);
   height: min(62vh, 640px);
-  margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -598,8 +599,9 @@
   }
 
   .hero-person {
-    width: min(56vw, 500px);
-    height: min(64vh, 600px);
+    bottom: -56px;
+    width: min(48vw, 420px);
+    height: min(54vh, 500px);
   }
 
   .hero-slot--users { left: 3%; bottom: 11%; }
@@ -655,8 +657,8 @@
   .hero-person {
     order: 3;
     inset: auto;
-    height: min(340px, 48vh);
-    width: min(100%, 300px);
+    height: min(280px, 40vh);
+    width: min(100%, 260px);
     margin: 0 auto;
   }
 
