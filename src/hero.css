@@ -392,12 +392,7 @@
 
 .hero-art {
   position: absolute;
-  top: 50%;
-  right: max(1vw, calc(50% - 42rem));
-  transform: translateY(-42%);
   z-index: 2;
-  width: min(42vw, 520px);
-  height: min(78vh, 720px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -409,12 +404,41 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  object-position: center right;
   background: transparent;
+}
+
+.hero-art--right {
+  top: 50%;
+  right: max(1vw, calc(50% - 42rem));
+  transform: translateY(-42%);
+  width: min(42vw, 520px);
+  height: min(78vh, 720px);
+}
+
+.hero-art--right img {
+  object-position: center right;
   filter:
     contrast(1.04)
     saturate(1.1)
     drop-shadow(0 18px 48px rgba(0, 0, 0, 0.35));
+}
+
+.hero-art--left {
+  top: 48%;
+  left: 0;
+  /* Slide ~42% of the asset off-canvas so it emerges from the left edge */
+  transform: translate(-42%, -50%);
+  width: min(54vw, 620px);
+  height: min(96vh, 920px);
+  z-index: 1;
+}
+
+.hero-art--left img {
+  object-position: center right;
+  filter:
+    contrast(1.05)
+    saturate(1.12)
+    drop-shadow(0 20px 50px rgba(0, 0, 0, 0.4));
 }
 
 @media (max-width: 1100px) {
@@ -436,10 +460,16 @@
     --hero-headline-offset: 9.25rem;
   }
 
-  .hero-art {
+  .hero-art--right {
     width: min(46vw, 440px);
     height: min(70vh, 620px);
     right: 2%;
+  }
+
+  .hero-art--left {
+    width: min(58vw, 520px);
+    height: min(88vh, 780px);
+    transform: translate(-46%, -50%);
   }
 }
 
@@ -460,7 +490,7 @@
   }
 
   .hero-headline,
-  .hero-art {
+  .hero-art--right {
     position: relative;
     left: auto;
     right: auto;
@@ -468,6 +498,16 @@
     bottom: auto;
     transform: none;
     width: 100%;
+  }
+
+  .hero-art--left {
+    position: absolute;
+    top: 58%;
+    left: 0;
+    width: min(70vw, 280px);
+    height: min(70vh, 420px);
+    transform: translate(-48%, -50%);
+    opacity: 0.92;
   }
 
   .hero-bento .hero-headline {
@@ -480,13 +520,14 @@
     left: auto;
     top: auto;
     position: relative;
+    z-index: 3;
   }
 
-  .hero-art {
+  .hero-art--right {
     order: 2;
     inset: auto;
-    height: min(340px, 48vh);
-    width: min(100%, 300px);
+    height: min(300px, 42vh);
+    width: min(100%, 260px);
     margin: 0 auto;
   }
 }

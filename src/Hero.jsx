@@ -1,9 +1,13 @@
 import { motion, useReducedMotion } from 'framer-motion';
 
 const HERO = {
-  art: {
+  leftArt: {
+    src: '/assets/hero-glass-fan.webp',
+    width: 1000,
+    height: 1923,
+  },
+  rightArt: {
     src: '/assets/hero-glass-rings.webp',
-    alt: 'Iridescent glass rings with prismatic light',
     width: 900,
     height: 1224,
   },
@@ -24,6 +28,24 @@ export default function Hero() {
       <div className="hero-glow" aria-hidden="true" />
 
       <div className="hero-stage">
+        <motion.div
+          className="hero-art hero-art--left"
+          initial={reduce ? false : { opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.05, delay: 0.18, ease }}
+          aria-hidden="true"
+        >
+          <img
+            src={HERO.leftArt.src}
+            alt=""
+            width={HERO.leftArt.width}
+            height={HERO.leftArt.height}
+            fetchPriority="high"
+            decoding="async"
+            draggable={false}
+          />
+        </motion.div>
+
         <h1 className="hero-headline">
           {HEADLINE.map((line, lineIndex) => {
             let wordOffset = HEADLINE.slice(0, lineIndex).reduce((sum, row) => sum + row.words.length, 0);
@@ -57,18 +79,17 @@ export default function Hero() {
         </h1>
 
         <motion.div
-          className="hero-art"
+          className="hero-art hero-art--right"
           initial={reduce ? false : { opacity: 0, x: 36, scale: 0.94 }}
           animate={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 1, delay: 0.22, ease }}
           aria-hidden="true"
         >
           <img
-            src={HERO.art.src}
+            src={HERO.rightArt.src}
             alt=""
-            width={HERO.art.width}
-            height={HERO.art.height}
-            fetchPriority="high"
+            width={HERO.rightArt.width}
+            height={HERO.rightArt.height}
             decoding="async"
             draggable={false}
           />
