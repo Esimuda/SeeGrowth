@@ -259,8 +259,7 @@ onReady(function () {
 
   var activeStyle = document.createElement('style');
   activeStyle.textContent =
-    '.nav-links a.active{color:var(--orange)}' +
-    '.nav-links a.active::after{width:100%!important}';
+    '.site-nav .nav-links a.active{color:var(--orange)}';
   document.head.appendChild(activeStyle);
 
   function updateNav() {

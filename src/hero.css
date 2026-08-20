@@ -50,21 +50,23 @@
 }
 
 .site-nav .nav-links a {
-  color: var(--orange);
+  color: #111;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.01em;
   white-space: nowrap;
   text-align: center;
+  transition: color 0.2s ease;
 }
 
 .site-nav .nav-links a:hover,
-.site-nav .nav-links a.active {
-  color: var(--orange-dark);
+.site-nav .nav-links a.active,
+.site-nav .nav-links a:active {
+  color: var(--orange);
 }
 
 .site-nav .nav-links a::after {
-  background-color: var(--orange);
+  display: none;
 }
 
 .nav-actions {
@@ -81,15 +83,16 @@
   height: 40px;
   border: 0;
   background: transparent;
-  color: var(--orange);
+  color: #111;
   cursor: pointer;
   border-radius: 50%;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.nav-icon-btn:hover {
+.nav-icon-btn:hover,
+.nav-icon-btn:active {
   background: rgba(242, 100, 25, 0.12);
-  color: var(--orange-dark);
+  color: var(--orange);
 }
 
 .search-overlay {

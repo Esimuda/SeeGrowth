@@ -458,6 +458,20 @@ button { font-family: var(--font-main); }
   background-color: #ffffff;
 }
 
+.navbar.site-nav .nav-links a::after {
+  display: none;
+}
+
+.navbar.site-nav .nav-links a {
+  color: #111;
+}
+
+.navbar.site-nav .nav-links a:hover,
+.navbar.site-nav .nav-links a.active,
+.navbar.site-nav .nav-links a:active {
+  color: var(--orange);
+}
+
 /* Logo */
 .logo {
   display: flex;
