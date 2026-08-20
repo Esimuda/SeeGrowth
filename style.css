@@ -1153,7 +1153,11 @@ button { font-family: var(--font-main); }
   margin: 0 auto;
   border-radius: 28px;
   overflow: hidden;
-  background: #000;
+  background-color: #0a0c10;
+  background-image: url('/assets/booking-cta-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   min-height: 340px;
   display: grid;
   place-items: center;
