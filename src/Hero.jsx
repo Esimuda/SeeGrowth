@@ -73,8 +73,8 @@ export default function Hero() {
           <img
             src={HERO.person.src}
             alt={HERO.person.alt}
-            width={699}
-            height={846}
+            width={720}
+            height={816}
             fetchPriority="high"
             decoding="async"
           />

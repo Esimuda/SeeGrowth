@@ -369,13 +369,13 @@
 .hero-person {
   position: absolute;
   left: 50%;
-  top: 58%;
-  transform: translate(-50%, -50%);
+  bottom: 0;
+  transform: translateX(-50%);
   z-index: 3;
-  width: min(48vw, 500px);
-  height: min(70vh, 660px);
+  width: min(52vw, 540px);
+  height: min(84vh, 780px);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   pointer-events: none;
 }
@@ -385,8 +385,8 @@
   height: 100%;
   max-width: 100%;
   object-fit: contain;
-  object-position: center center;
-  filter: contrast(1.06) saturate(1.08);
+  object-position: center bottom;
+  filter: contrast(1.05) saturate(1.1) drop-shadow(0 0 42px rgba(242, 100, 25, 0.2));
 }
 
 .hero-slot {
@@ -519,9 +519,8 @@
   }
 
   .hero-person {
-    top: 54%;
-    width: min(58vw, 420px);
-    height: min(62vh, 520px);
+    width: min(60vw, 460px);
+    height: min(72vh, 560px);
   }
 
   .hero-slot--users { left: 3%; bottom: 6%; }
@@ -582,10 +581,10 @@
 
   .hero-person {
     order: 3;
-    top: auto;
+    bottom: auto;
     transform: none;
-    height: min(420px, 58vh);
-    width: min(100%, 340px);
+    height: min(460px, 62vh);
+    width: min(100%, 360px);
     margin: 0 auto;
   }
   .hero-slot--users { order: 4; margin: 8px 0; }
