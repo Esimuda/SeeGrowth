@@ -1,7 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion';
 
-const PARTNERS = ['Web3', 'AI', 'RWA', 'DeFi', 'Solana', 'Growth'];
-
 const CARDS = [
   {
     id: 'brand',
@@ -28,38 +26,12 @@ const CARDS = [
 
 const ease = [0.22, 1, 0.36, 1];
 
-const fadeUp = (delay = 0) => ({
-  hidden: { opacity: 0, y: 28 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, delay, ease },
-  },
-});
-
 export default function Benefits() {
   const reduce = useReducedMotion();
   const viewport = { once: true, amount: 0.18 };
 
   return (
     <section className="benefits benefits-editorial" id="benefits">
-      <motion.div
-        className="benefits-logos"
-        initial={reduce ? false : 'hidden'}
-        whileInView="show"
-        viewport={viewport}
-      >
-        {PARTNERS.map((name, i) => (
-          <motion.span
-            key={name}
-            className={`benefits-logo benefits-logo--${i}`}
-            variants={fadeUp(i * 0.06)}
-          >
-            {name}
-          </motion.span>
-        ))}
-      </motion.div>
-
       <div className="benefits-intro">
         <motion.div
           className="benefits-intro-left"

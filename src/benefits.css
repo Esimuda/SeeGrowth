@@ -21,35 +21,6 @@
   display: none;
 }
 
-.benefits-logos {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  max-width: 1080px;
-  margin: 0 auto 64px;
-  padding: 0 8px;
-  flex-wrap: wrap;
-}
-
-.benefits-logo {
-  font-family: 'Outfit', var(--font-main);
-  font-size: clamp(15px, 1.5vw, 20px);
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: rgba(17, 17, 17, 0.28);
-  text-transform: none;
-  white-space: nowrap;
-  user-select: none;
-}
-
-.benefits-logo--0 { letter-spacing: 0.18em; font-weight: 800; }
-.benefits-logo--1 { font-style: italic; letter-spacing: 0.02em; }
-.benefits-logo--2 { letter-spacing: 0.28em; font-weight: 600; }
-.benefits-logo--3 { text-transform: lowercase; letter-spacing: -0.02em; }
-.benefits-logo--4 { letter-spacing: 0.12em; }
-.benefits-logo--5 { font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; }
-
 .benefits-intro {
   display: grid;
   grid-template-columns: minmax(220px, 0.9fr) minmax(0, 1.35fr);
@@ -275,12 +246,6 @@
 }
 
 @media (max-width: 560px) {
-  .benefits-logos {
-    justify-content: center;
-    gap: 14px 22px;
-    margin-bottom: 40px;
-  }
-
   .benefits-headline {
     font-size: 26px;
   }
