@@ -4,9 +4,11 @@ import Navbar from './Navbar.jsx';
 import Hero from './Hero.jsx';
 import LogoCarousel from './LogoCarousel.jsx';
 import Benefits from './Benefits.jsx';
+import Services from './Services.jsx';
 import './hero.css';
 import './logo-carousel.css';
 import './benefits.css';
+import './services.css';
 
 createRoot(document.getElementById('nav-root')).render(
   <StrictMode>
@@ -29,6 +31,12 @@ createRoot(document.getElementById('logo-carousel-root')).render(
 createRoot(document.getElementById('benefits-root')).render(
   <StrictMode>
     <Benefits />
+  </StrictMode>
+);
+
+createRoot(document.getElementById('services-root')).render(
+  <StrictMode>
+    <Services />
   </StrictMode>
 );
 

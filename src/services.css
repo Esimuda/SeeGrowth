@@ -1,0 +1,257 @@
+#services-root {
+  display: contents;
+}
+
+.services.services-bento {
+  background: #f3f1ee;
+  color: #111;
+  text-align: left;
+  padding: 88px 5.5% 96px;
+  overflow: hidden;
+}
+
+.services.services-bento::before {
+  content: none;
+  display: none;
+}
+
+.services-intro {
+  max-width: 1120px;
+  margin: 0 auto 36px;
+}
+
+.services-kicker {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #F26419;
+  margin-bottom: 14px;
+}
+
+.services-headline {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+  text-transform: uppercase;
+  color: #111;
+}
+
+.services-headline__line {
+  display: block;
+}
+
+.services-headline em {
+  font-style: normal;
+  color: #F26419;
+}
+
+.services-board {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(240px, 0.92fr) minmax(0, 1.28fr);
+  gap: 22px;
+  padding: 22px;
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: 0 18px 50px rgba(10, 10, 10, 0.08);
+}
+
+.services-feature {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 420px;
+  padding: 28px 26px 24px;
+  border-radius: 22px;
+  background: #F26419;
+  color: #fff;
+  overflow: hidden;
+}
+
+.services-feature-mark {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.services-feature-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.35;
+  opacity: 0.92;
+}
+
+.services-feature-top span {
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+.services-feature-stat {
+  margin: 48px 0 32px;
+}
+
+.services-feature-number {
+  font-size: clamp(72px, 10vw, 118px);
+  font-weight: 700;
+  letter-spacing: -0.07em;
+  line-height: 0.8;
+}
+
+.services-feature-suffix {
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 400;
+  margin-left: 2px;
+  opacity: 0.9;
+}
+
+.services-feature-stat p {
+  margin-top: 14px;
+  max-width: 14em;
+  font-size: 13px;
+  line-height: 1.4;
+  opacity: 0.88;
+}
+
+.services-feature-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.services-feature-foot span {
+  opacity: 0.78;
+  white-space: nowrap;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  padding: 8px 4px 8px 0;
+}
+
+.services-list li {
+  list-style: none;
+}
+
+.services-row {
+  display: grid;
+  grid-template-columns: 78px minmax(0, 1fr) auto 48px;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 8px 14px 6px;
+  border-radius: 18px;
+  color: #111;
+  transition: background 0.25s ease;
+}
+
+.services-row:hover {
+  background: #f6f4f1;
+}
+
+.services-thumb {
+  width: 78px;
+  height: 78px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #eceae6;
+}
+
+.services-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.services-row:hover .services-thumb img {
+  transform: scale(1.08);
+}
+
+.services-row-copy strong {
+  display: block;
+  font-size: clamp(15px, 1.5vw, 18px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+}
+
+.services-row-meta {
+  font-size: 12px;
+  font-weight: 500;
+  color: #3a3a3a;
+  white-space: nowrap;
+}
+
+.services-row-go {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 1.5px solid #111;
+  color: #111;
+  background: #fff;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+
+.services-row-go.is-primary {
+  background: #F26419;
+  border-color: #F26419;
+  color: #fff;
+}
+
+.services-row:hover .services-row-go {
+  transform: translate(2px, -2px);
+}
+
+@media (max-width: 860px) {
+  .services.services-bento {
+    padding: 72px 20px 80px;
+  }
+
+  .services-board {
+    grid-template-columns: 1fr;
+    padding: 14px;
+    border-radius: 22px;
+  }
+
+  .services-feature {
+    min-height: 340px;
+  }
+
+  .services-row {
+    grid-template-columns: 64px minmax(0, 1fr) 44px;
+    gap: 12px;
+  }
+
+  .services-row-meta {
+    display: none;
+  }
+
+  .services-thumb {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+  }
+}
