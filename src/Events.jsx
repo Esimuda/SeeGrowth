@@ -5,9 +5,10 @@ const PHOTO_COUNT = 28;
 
 const PHOTOS = Array.from({ length: PHOTO_COUNT }, (_, i) => {
   const n = String(i + 1).padStart(2, '0');
+  const bust = i < 18 ? '?v=2' : '';
   return {
     id: `photo-${n}`,
-    src: `/assets/events/event-photo-${n}.webp`,
+    src: `/assets/events/event-photo-${n}.webp${bust}`,
     alt: `Community event photo ${i + 1}`,
   };
 });
