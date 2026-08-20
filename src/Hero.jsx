@@ -7,11 +7,6 @@ const HERO = {
     src: '/assets/hero-person.webp',
     alt: 'Confident growth strategist in SeeGrowth orange, arms crossed and ready to scale your project',
   },
-  appointment: {
-    title: 'Free Consult',
-    subtitle: 'Book Now',
-    href: '#booking',
-  },
   socialProof: {
     count: '200+',
     label: 'Happy clients around the world',
@@ -86,33 +81,6 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-          className="hero-slot hero-slot--appt"
-          initial={reduce ? false : { opacity: 0, x: -28 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7, delay: 0.55, ease }}
-        >
-          <motion.a
-            href={HERO.appointment.href}
-            className="hero-card hero-card--appt"
-            animate={reduce ? undefined : floatAnim(0.2, 8)}
-            whileHover={reduce ? undefined : { y: -8, scale: 1.03 }}
-          >
-            <span className="appt-icons">
-              <span className="appt-icon appt-icon--light" aria-hidden="true">
-                <ArrowUpRight />
-              </span>
-              <span className="appt-icon appt-icon--dark" aria-hidden="true">
-                <Sparkle />
-              </span>
-            </span>
-            <span className="appt-copy">
-              <strong>{HERO.appointment.title}</strong>
-              <small>{HERO.appointment.subtitle}</small>
-            </span>
-          </motion.a>
-        </motion.div>
-
-        <motion.div
           className="hero-slot hero-slot--users"
           initial={reduce ? false : { opacity: 0, x: -36, y: 24 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
@@ -181,22 +149,6 @@ export default function Hero() {
         </motion.svg>
       </div>
     </section>
-  );
-}
-
-function ArrowUpRight() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function Sparkle() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M12 3l1.6 6.4L20 11l-6.4 1.6L12 19l-1.6-6.4L4 11l6.4-1.6L12 3z" fill="currentColor" />
-    </svg>
   );
 }
 
