@@ -1135,114 +1135,117 @@ button { font-family: var(--font-main); }
 /* Testimonials styles moved to src/testimonials.css */
 
 
-.booking {
-  padding: 90px 52px;
-  background-color: var(--bg);
+.booking.booking-cta-panel {
+  padding: 72px 5.5% 96px;
+  background: #f3f1ee;
   text-align: center;
 }
 
-.booking-title {
-  font-family: var(--font-display);
-  font-size: clamp(38px, 5vw, 58px);
-  letter-spacing: 1.5px;
-  line-height: 1.0;
-  color: var(--white);
-  margin-bottom: 44px;
+.booking.booking-cta-panel::before {
+  content: none;
+  display: none;
 }
 
-/* White card */
-.booking-card {
-  max-width: 480px;
-  margin: 0 auto;
-  background-color: var(--white);
-  border-radius: var(--radius-card);
-  padding: 36px 36px 30px;
-  text-align: left;
+.booking-panel {
   position: relative;
+  z-index: 1;
+  max-width: 1120px;
+  margin: 0 auto;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #0c0f14;
+  min-height: 340px;
+  display: grid;
+  place-items: center;
+  padding: 72px 40px;
+  box-shadow: 0 24px 60px rgba(10, 10, 10, 0.18);
+}
+
+.booking-blob {
+  position: absolute;
+  inset: 8% 12%;
+  z-index: 0;
+  pointer-events: none;
+  display: grid;
+  place-items: center;
+}
+
+.booking-blob__svg {
+  width: min(100%, 620px);
+  height: auto;
+  opacity: 0.92;
+}
+
+.booking-panel__content {
+  position: relative;
+  z-index: 1;
+  max-width: 34em;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.booking-panel__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+  color: var(--orange);
+}
+
+.booking-panel__sub {
+  margin: 0;
+  font-family: var(--font-main);
+  font-size: clamp(15px, 1.5vw, 17px);
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 36em;
+}
+
+.booking-panel__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 14px 22px;
+  border-radius: var(--radius-btn);
+  background: #fff;
   color: #111;
-  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease;
+  font-family: var(--font-main);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
 }
 
-.booking-card:hover { transform: translateY(-4px); }
-
-.booking-card-header {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 18px;
+.booking-panel__cta:hover {
+  background: var(--orange);
+  color: #fff;
+  transform: translateY(-2px);
 }
 
-.booking-icon-wrap {
-  width: 46px;
-  height: 46px;
-  border-radius: 12px;
-  background-color: rgba(242, 100, 25, 0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.booking-panel__cta svg {
   flex-shrink: 0;
 }
 
-.booking-meta {
-  font-size: 12px;
-  color: #999;
-}
+@media (max-width: 760px) {
+  .booking.booking-cta-panel {
+    padding: 56px 20px 72px;
+  }
 
-/* CTA sits on a white card, so hover flips to dark instead of white */
-.booking-cta {
-  width: 100%;
-  justify-content: center;
-  margin-top: 6px;
-}
+  .booking-panel {
+    min-height: 300px;
+    padding: 56px 24px;
+    border-radius: 22px;
+  }
 
-.booking-cta:hover {
-  background-color: #111;
-  border-color: #111;
-  color: var(--white);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Corner badge */
-.booking-corner-badge {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: #455a72;
-  color: var(--white);
-  font-size: 9px;
-  line-height: 1.4;
-  padding: 10px 14px;
-  border-radius: 0 var(--radius-card) 0 12px;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  text-align: left;
-}
-
-.booking-corner-badge strong { font-size: 10px; display: block; }
-
-.booking-company {
-  font-size: 15px;
-  font-weight: 700;
-  color: #111;
-  margin-bottom: 2px;
-}
-
-.booking-message {
-  font-size: 15px;
-  color: #333;
-  margin-bottom: 14px;
-}
-
-.booking-sub {
-  font-size: 12px;
-  color: #aaa;
-}
-
-.booking-sub a {
-  color: #4a9eff;
-  text-decoration: underline;
+  .booking-blob {
+    inset: 12% 4%;
+  }
 }
 
 
@@ -1437,11 +1440,8 @@ button { font-family: var(--font-main); }
   .hero-shapes { display: none; }
 
   .section-title { font-size: 34px; }
-  .booking-title { font-size: 34px; }
 
   .benefits-grid { max-width: 100%; }
-
-  .booking-card { padding: 28px 22px 24px; }
 
   .btn-full { font-size: 15px; padding: 15px; }
 

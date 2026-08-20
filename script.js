@@ -502,7 +502,7 @@ onReady(function () {
   /* ==============================================================
      19. BOOKING CARD — attention pulse on first enter
      ============================================================== */
-  var bookCard = document.querySelector('.booking-card');
+  var bookCard = document.querySelector('.booking-panel');
   if (bookCard) {
     var bookObs = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -703,7 +703,7 @@ onReady(function () {
     });
   });
 
-  var bookingLink = document.querySelector('.booking-cta');
+  var bookingLink = document.querySelector('.booking-panel__cta');
   if (bookingLink) {
     bookingLink.addEventListener('click', function () {
       if (typeof gtag === 'function') {

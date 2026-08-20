@@ -190,25 +190,42 @@
   <!-- ============================================================
        BOOKING / CONSULTATION SECTION
   ============================================================ -->
-  <section class="booking" id="booking">
-<span class="section-badge" data-anim="badge-pop">Book a Call</span>
-    <h2 class="booking-title split-title" data-anim="split-title">BOOK YOUR FREE<br />CONSULTATION</h2>
-
-    <div class="booking-card" data-anim="zoom-fade" data-delay="200">
-      <div class="booking-card-header">
-        <span class="booking-icon-wrap" aria-hidden="true">
-          <span class="booking-cal-icon booking-cal-icon--accent"></span>
-        </span>
-        <div>
-          <p class="booking-company">Free Strategy Session</p>
-          <p class="booking-meta">30 min &middot; Video call &middot; No commitment</p>
-        </div>
+  <section class="booking booking-cta-panel" id="booking">
+    <div class="booking-panel" data-anim="zoom-fade">
+      <div class="booking-blob" aria-hidden="true">
+        <svg class="booking-blob__svg" viewBox="0 0 520 360" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="bookingBlobGrad" x1="12%" y1="8%" x2="88%" y2="92%">
+              <stop offset="0%" stop-color="#FFB347" />
+              <stop offset="42%" stop-color="#F26419" />
+              <stop offset="100%" stop-color="#C43B8C" />
+            </linearGradient>
+            <filter id="bookingBlobBlur" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="18" />
+            </filter>
+          </defs>
+          <ellipse cx="260" cy="180" rx="210" ry="145" fill="url(#bookingBlobGrad)" filter="url(#bookingBlobBlur)" opacity="0.95" />
+          <ellipse cx="300" cy="200" rx="150" ry="110" fill="url(#bookingBlobGrad)" opacity="0.55" />
+        </svg>
       </div>
-      <p class="booking-message">
-        Tell us about your project and we'll map out a growth plan
-        tailored to your goals — including a custom pricing offer.
-      </p>
-      <a href="https://cal.com/shumin-shu-ooxnsp/30min" target="_blank" rel="noopener noreferrer" class="btn-primary booking-cta">Book Your Call &rarr;</a>
+
+      <div class="booking-panel__content">
+        <h2 class="booking-panel__title">Ready to see real growth?</h2>
+        <p class="booking-panel__sub">
+          Book a free 30-min strategy session. We'll talk goals, timeline, and map a growth plan tailored to your project — including a custom pricing offer.
+        </p>
+        <a
+          href="https://cal.com/shumin-shu-ooxnsp/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="booking-panel__cta"
+        >
+          Get started
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
 
