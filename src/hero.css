@@ -384,8 +384,8 @@
   position: absolute;
   inset: 0;
   z-index: 2;
-  width: min(52vw, 660px);
-  height: min(74vh, 780px);
+  width: min(44vw, 540px);
+  height: min(62vh, 640px);
   margin: auto;
   display: flex;
   align-items: center;
