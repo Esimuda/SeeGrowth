@@ -1310,7 +1310,7 @@ button { font-family: var(--font-main); }
   margin-top: 24px;
   padding: 12px 18px;
   border-radius: var(--radius-btn);
-  background: var(--orange);
+  background: #111;
   color: #fff;
   font-family: var(--font-main);
   font-size: 14px;
@@ -1320,7 +1320,7 @@ button { font-family: var(--font-main); }
 }
 
 .faq-intro-cta:hover {
-  background: var(--orange-dark);
+  background: #000;
   transform: translateY(-1px);
 }
 
