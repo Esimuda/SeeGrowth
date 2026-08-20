@@ -24,14 +24,23 @@ export function Logo({ className = '' }) {
 }
 
 const SEARCH_INDEX = [
-  { title: 'Paid Traffic', href: '#services', hint: 'Targeted campaigns & ROI-driven ads' },
-  { title: 'Graphic Design & Branding', href: '#services', hint: 'Visual identity for Web3 teams' },
-  { title: 'Content Marketing Strategy', href: '#services', hint: 'Storytelling that converts' },
-  { title: 'Case Studies', href: '#case-studies', hint: 'A conversion revolution' },
-  { title: 'Pitch Deck 2026', href: '#case-studies', hint: 'See the full picture' },
-  { title: 'Testimonials', href: '#testimonials', hint: 'What clients say about us' },
-  { title: 'Free Consultation', href: '#booking', hint: '30 min strategy session' },
-  { title: 'Pricing & FAQ', href: '#faq', hint: 'Guarantee, process, and offers' },
+  { title: 'Why SeeGrowth', href: '#benefits', hint: 'Brand elevation, ROI, and tailored solutions' },
+  { title: 'Paid Traffic', href: '#services', hint: 'Campaigns that find wallets ready to convert' },
+  { title: 'Brand Systems', href: '#services', hint: 'Identity that looks inevitable at every touchpoint' },
+  { title: 'Content Engines', href: '#services', hint: 'Content that turns lurkers into believers' },
+  { title: 'Community Events', href: '#events', hint: 'Photos and moments from SeeGrowth gatherings' },
+  { title: 'Solar Singapore Reel', href: '#event-video', hint: 'Highlight video from the community' },
+  { title: 'Helix Finance', href: '#case-studies', hint: 'How Helix cut CAC by 41% with paid traffic' },
+  { title: 'Meridian Labs', href: '#case-studies', hint: 'Brand and content matched to product velocity' },
+  {
+    title: 'Orbit DAO Pitch Deck',
+    href: 'https://www.dropbox.com/scl/fi/pwmjqyx41y9sq79oq24jp/SeeGrowth-Deck-2026.pdf?rlkey=7a2oba79q4eh951vilfl14zyl&st=y674i4kx&dl=0',
+    hint: 'View the 2026 SeeGrowth growth deck',
+    external: true,
+  },
+  { title: 'Testimonials', href: '#testimonials', hint: 'What clients say about working with us' },
+  { title: 'Book a Strategy Call', href: '#booking', hint: 'Free 30-min session — goals, timeline, custom offer' },
+  { title: 'Common Questions', href: '#faq', hint: 'Pricing, guarantee, and what happens on the free call' },
 ];
 
 export default function Navbar() {
@@ -122,7 +131,7 @@ export default function Navbar() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="search-panel-head">
-                <p className="search-panel-title">Search</p>
+                <p className="search-panel-title">Find your way</p>
                 <button type="button" className="search-close" aria-label="Close search" onClick={closeAll}>
                   <CloseIcon />
                 </button>
@@ -133,7 +142,7 @@ export default function Navbar() {
                 <input
                   autoFocus
                   type="search"
-                  placeholder="Services, case studies, booking…"
+                  placeholder="Services, events, case studies, FAQ…"
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                 />
@@ -146,11 +155,17 @@ export default function Navbar() {
                 </p>
                 <ul className="search-results">
                   {results.length === 0 && (
-                    <li className="search-empty">Try “traffic”, “consult”, or “faq”.</li>
+                    <li className="search-empty">Try “events”, “helix”, “pricing”, or “book”.</li>
                   )}
                   {results.map((item) => (
                     <li key={item.title}>
-                      <a href={item.href} onClick={closeAll}>
+                      <a
+                        href={item.href}
+                        onClick={closeAll}
+                        {...(item.external
+                          ? { target: '_blank', rel: 'noopener noreferrer' }
+                          : {})}
+                      >
                         <span>{item.title}</span>
                         <small>{item.hint}</small>
                       </a>
