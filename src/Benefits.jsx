@@ -10,8 +10,8 @@ const CARDS = [
   },
   {
     id: 'roi',
-    src: '/assets/benefit-roi.jpg',
-    alt: 'Dark trading desk with orange growth charts across monitors, laptop, and tablet',
+    src: '/assets/benefit-roi.webp',
+    alt: 'Red ladder leaning against a silver ampersand symbol, representing growth and maximizing returns',
     title: 'Maximize ROI',
     href: '#services',
   },
