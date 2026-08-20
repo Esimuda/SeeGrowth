@@ -411,14 +411,19 @@
   top: 48%;
   right: 0;
   left: auto;
-  /* Keep more of the graphic clipped by the right edge so it emerges from the side */
-  transform: translate(48%, -50%);
-  width: min(52vw, 580px);
-  height: min(92vh, 880px);
+  /* Shift further right so the page edge hides more of the graphic */
+  transform: translate(58%, -50%);
+  width: min(36vw, 420px);
+  height: auto;
+  aspect-ratio: 900 / 1600;
 }
 
 .hero-art--right img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   object-position: left center;
+  aspect-ratio: 900 / 1600;
   filter:
     contrast(1.05)
     saturate(1.12)
@@ -505,10 +510,11 @@
   }
 
   .hero-art--right {
-    width: min(56vw, 500px);
-    height: min(86vh, 760px);
+    width: min(40vw, 360px);
+    height: auto;
+    aspect-ratio: 900 / 1600;
     right: 0;
-    transform: translate(50%, -50%);
+    transform: translate(60%, -50%);
   }
 
   .hero-art--left {
@@ -565,9 +571,10 @@
     top: 62%;
     right: 0;
     left: auto;
-    width: min(70vw, 280px);
-    height: min(70vh, 420px);
-    transform: translate(48%, -50%);
+    width: min(48vw, 220px);
+    height: auto;
+    aspect-ratio: 900 / 1600;
+    transform: translate(55%, -50%);
     opacity: 0.92;
   }
 

@@ -13,9 +13,9 @@ const HERO = {
     height: 1224,
   },
   rightArt: {
-    src: '/assets/hero-glass-fan.webp?v=2',
-    width: 1000,
-    height: 1923,
+    src: '/assets/hero-glass-fan.png?v=3',
+    width: 900,
+    height: 1600,
   },
 };
 
