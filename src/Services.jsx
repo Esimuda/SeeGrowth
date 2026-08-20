@@ -33,7 +33,6 @@ export default function Services() {
 
   return (
     <section className="services services-bento" id="services">
-      <div className="services-glass">
       <div className="services-intro">
         <h2 className="services-headline">
           <span className="services-headline__line">Services built to</span>
@@ -101,7 +100,6 @@ export default function Services() {
           ))}
         </ul>
       </motion.div>
-      </div>
     </section>
   );
 }

@@ -3,10 +3,7 @@
 }
 
 .services.services-bento {
-  background:
-    radial-gradient(ellipse at 12% 20%, rgba(242, 100, 25, 0.16), transparent 42%),
-    radial-gradient(ellipse at 88% 80%, rgba(242, 100, 25, 0.1), transparent 46%),
-    linear-gradient(180deg, #e9e4df 0%, #f3f1ee 48%, #e6e0da 100%);
+  background: #f3f1ee;
   color: #111;
   text-align: left;
   padding: 88px 5.5% 96px;
@@ -18,23 +15,9 @@
   display: none;
 }
 
-.services-glass {
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 36px 28px 28px;
-  border-radius: 32px;
-  background: rgba(255, 255, 255, 0.38);
-  backdrop-filter: blur(22px) saturate(180%);
-  -webkit-backdrop-filter: blur(22px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.62);
-  box-shadow:
-    0 18px 50px rgba(10, 10, 10, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.75);
-}
-
 .services-intro {
-  max-width: none;
-  margin: 0 0 28px;
+  max-width: 1120px;
+  margin: 0 auto 36px;
 }
 
 .services-headline {
@@ -58,15 +41,15 @@
 }
 
 .services-board {
-  max-width: none;
-  margin: 0;
+  max-width: 1120px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(240px, 0.92fr) minmax(0, 1.28fr);
   gap: 22px;
-  padding: 0;
-  background: transparent;
-  border-radius: 0;
-  box-shadow: none;
+  padding: 22px;
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: 0 18px 50px rgba(10, 10, 10, 0.08);
 }
 
 .services-feature {
@@ -228,15 +211,10 @@
     padding: 72px 20px 80px;
   }
 
-  .services-glass {
-    padding: 22px 16px 16px;
-    border-radius: 24px;
-  }
-
   .services-board {
     grid-template-columns: 1fr;
-    padding: 0;
-    border-radius: 0;
+    padding: 14px;
+    border-radius: 22px;
   }
 
   .services-feature {
