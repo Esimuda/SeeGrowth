@@ -20,8 +20,8 @@ const ROWS = [
   },
   {
     id: 'content',
-    src: '/assets/service-content.webp',
-    alt: 'Team collaborating in a light, modern studio',
+    src: '/assets/service-content-torus.webp',
+    alt: 'Iridescent 3D torus, representing content engines that convert lurkers',
     title: 'Content engines that turn lurkers into believers',
     meta: 'Q3 2026',
     href: '#booking',
