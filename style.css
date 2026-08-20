@@ -19,6 +19,7 @@
   --font-main:     'Inter', sans-serif;
   --font-display:  'Bebas Neue', sans-serif;
   --nav-h:         68px;
+  --logo-h:        38px;
   --radius-card:   16px;
   --radius-btn:    50px;
   --shadow-card:   0 8px 40px rgba(0, 0, 0, 0.5);
@@ -461,17 +462,14 @@ button { font-family: var(--font-main); }
 .logo {
   display: flex;
   align-items: center;
-  gap: 9px;
   flex-shrink: 0;
 }
 
-.logo-icon { width: 34px; height: 34px; flex-shrink: 0; }
-
-.logo-text {
-  font-size: 17px;
-  font-weight: 700;
-  color: var(--orange);
-  letter-spacing: 1px;
+.logo-img {
+  display: block;
+  height: var(--logo-h);
+  width: auto;
+  flex-shrink: 0;
 }
 
 /* Nav links */
@@ -983,13 +981,10 @@ button { font-family: var(--font-main); }
 .case-card:hover .deck-slide--back { transform: rotate(-8deg) translateY(13px); }
 .case-card:hover .deck-slide--mid  { transform: rotate(5deg) translateY(7px); }
 
-.deck-title {
-  font-family: var(--font-display);
-  font-size: 22px;
-  letter-spacing: 2px;
-  color: var(--white);
-  line-height: 1;
-  margin-top: 6px;
+.deck-logo {
+  display: block;
+  height: 28px;
+  width: auto;
 }
 
 .deck-sub {
@@ -1638,19 +1633,6 @@ button { font-family: var(--font-main); }
    SVG ASSETS — All SVG images are defined here in CSS only.
    HTML contains only semantic structure; no inline SVGs.
    ================================================================ */
-
-/* ── LOGO ICON ─────────────────────────────────────────────────── */
-.logo-icon {
-  display: inline-block;
-  width: 34px;
-  height: 34px;
-  flex-shrink: 0;
-  background-image: url("data:image/svg+xml,%3Csvg class='logo-icon' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M4 20 C10 10, 30 10, 36 20 C30 30, 10 30, 4 20 Z' stroke='%23F26419' stroke-width='2.2' fill='none'/%3E %3Ccircle cx='20' cy='20' r='7' stroke='%23F26419' stroke-width='2'/%3E %3Cpath d='M15 22 L20 16 L25 22' stroke='%23F26419' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E %3C/svg%3E");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  vertical-align: middle;
-}
 
 /* ── HERO SECTION BACKGROUND ───────────────────────────────────── */
 .hero::before {

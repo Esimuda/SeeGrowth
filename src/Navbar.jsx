@@ -10,15 +10,24 @@ export const NAV_LINKS = [
   { label: 'Learn & Support', href: '#faq' },
 ];
 
+export const LOGO = {
+  src: '/assets/seegrowth-logo.webp',
+  alt: 'SeeGrowth',
+  width: 275,
+  height: 39,
+};
+
 export function Logo({ className = '' }) {
   return (
     <a href="#home" className={`logo ${className}`.trim()} aria-label="SeeGrowth home">
-      <svg className="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M4 20 C10 10, 30 10, 36 20 C30 30, 10 30, 4 20 Z" stroke="#F26419" strokeWidth="2.2" />
-        <circle cx="20" cy="20" r="7" stroke="#F26419" strokeWidth="2" />
-        <path d="M15 22 L20 16 L25 22" stroke="#F26419" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-      <span className="logo-text">SEEGROWTH</span>
+      <img
+        className="logo-img"
+        src={LOGO.src}
+        alt={LOGO.alt}
+        width={LOGO.width}
+        height={LOGO.height}
+        decoding="async"
+      />
     </a>
   );
 }

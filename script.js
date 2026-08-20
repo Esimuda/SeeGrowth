@@ -573,18 +573,18 @@ onReady(function () {
   if (!reduced) {
     var lastY = window.scrollY;
     var lastT = performance.now();
-    var logoIcon = document.querySelector('.navbar .logo-icon');
+    var logoImg = document.querySelector('.navbar .logo-img');
     var logoReset;
 
     window.addEventListener('scroll', function () {
       var now = performance.now();
       var vel = Math.abs(window.scrollY - lastY) / Math.max(now - lastT, 1);
-      if (logoIcon) {
+      if (logoImg) {
         var s = Math.min(1 + vel * 0.55, 1.28).toFixed(3);
-        logoIcon.style.transition = 'transform .18s ease';
-        logoIcon.style.transform  = 'scale(' + s + ')';
+        logoImg.style.transition = 'transform .18s ease';
+        logoImg.style.transform  = 'scale(' + s + ')';
         clearTimeout(logoReset);
-        logoReset = setTimeout(function () { logoIcon.style.transform = 'scale(1)'; }, 200);
+        logoReset = setTimeout(function () { logoImg.style.transform = 'scale(1)'; }, 200);
       }
       lastY = window.scrollY;
       lastT = now;

@@ -33,16 +33,9 @@
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
 }
 
-.site-nav .logo-text {
-  color: var(--orange);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-
-.site-nav .logo-icon {
-  width: 34px;
-  height: 34px;
-  background-image: none;
+.site-nav .logo-img {
+  height: var(--logo-h);
+  width: auto;
 }
 
 .site-nav .nav-links {
