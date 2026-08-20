@@ -3,7 +3,7 @@ import { motion, useReducedMotion } from 'framer-motion';
 const HERO = {
   headline: 'We Help You See Growth',
   person: {
-    src: '/assets/hero-person.webp',
+    src: '/assets/hero-person-visor.webp',
     alt: 'Futuristic strategist wearing an orange visor, lit by SeeGrowth brand glow',
     width: 720,
     height: 816,

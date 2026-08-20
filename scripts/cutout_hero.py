@@ -8,7 +8,7 @@ from scipy import ndimage
 
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "public" / "assets" / "hero-person.jpg"
-DST = ROOT / "public" / "assets" / "hero-person.webp"
+DST = ROOT / "public" / "assets" / "hero-person-visor.webp"
 PREVIEW = ROOT / "public" / "assets" / "_cutout-preview.jpg"
 MAX_WIDTH = 720
 
