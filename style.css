@@ -1423,58 +1423,161 @@ button { font-family: var(--font-main); }
    14. FOOTER
    ---------------------------------------------------------------- */
 .footer {
+  position: relative;
+  overflow: hidden;
+  padding: 48px 5.5% 56px;
+  background: #ebe8e4;
+  color: #111;
+}
+
+.footer-watermark {
+  position: absolute;
+  left: 50%;
+  bottom: -0.18em;
+  transform: translateX(-50%);
+  font-family: var(--font-display);
+  font-size: clamp(64px, 14vw, 160px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.8;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(17, 17, 17, 0.06);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  z-index: 0;
+}
+
+.footer-card {
+  position: relative;
+  z-index: 1;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 40px 44px 28px;
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0 18px 50px rgba(17, 17, 17, 0.08);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.4fr);
+  gap: 40px 48px;
+  align-items: start;
+}
+
+.footer-logo {
+  display: inline-flex;
+  margin-bottom: 16px;
+}
+
+.footer-logo img {
+  display: block;
+  width: min(220px, 70vw);
+  height: auto;
+}
+
+.footer-desc {
+  margin: 0;
+  max-width: 28em;
+  font-family: var(--font-main);
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(17, 17, 17, 0.58);
+}
+
+.footer-socials {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 24px;
-  padding: 40px 52px;
-  border-top: 1px solid var(--border);
-  background-color: var(--bg);
+  gap: 10px;
+  margin-top: 22px;
 }
-
-.footer-logo { margin-bottom: 10px; }
-
-.footer-tagline {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.35);
-  margin-bottom: 18px;
-}
-
-.footer-socials { display: flex; gap: 10px; }
 
 .social-icon {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255, 255, 255, 0.5);
-  transition: border-color var(--transition), color var(--transition), transform 0.2s ease;
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  display: grid;
+  place-items: center;
+  color: rgba(17, 17, 17, 0.55);
+  background: transparent;
+  transition: border-color var(--transition), color var(--transition), background 0.2s ease, transform 0.2s ease;
 }
 
 .social-icon:hover {
   border-color: var(--orange);
   color: var(--orange);
+  background: rgba(242, 100, 25, 0.06);
   transform: translateY(-2px);
 }
 
-.footer-links {
-  display: flex;
-  gap: 36px;
-  align-items: center;
-  flex-wrap: wrap;
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px 28px;
 }
 
-.footer-links a {
-  color: rgba(255, 255, 255, 0.45);
+.footer-col__title {
+  margin: 0 0 14px;
+  font-family: var(--font-main);
   font-size: 14px;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: -0.01em;
+}
+
+.footer-col__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col__list a {
+  font-family: var(--font-main);
+  font-size: 14px;
+  color: rgba(17, 17, 17, 0.55);
+  text-decoration: none;
   transition: color var(--transition);
 }
 
-.footer-links a:hover { color: var(--white); }
+.footer-col__list a:hover {
+  color: var(--orange);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 36px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(17, 17, 17, 0.08);
+}
+
+.footer-copy {
+  margin: 0;
+  font-family: var(--font-main);
+  font-size: 13px;
+  color: rgba(17, 17, 17, 0.45);
+}
+
+.footer-bottom__link {
+  font-family: var(--font-main);
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition);
+}
+
+.footer-bottom__link:hover {
+  color: var(--orange);
+}
 
 
 /* ----------------------------------------------------------------
@@ -1517,8 +1620,22 @@ button { font-family: var(--font-main); }
   .service-content.dark { padding: 32px 28px; }
   .service-content.dark { border-right: none; border-bottom: 1px solid var(--border); }
 
-  .footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
-  .footer-links { gap: 20px; }
+  .footer { padding: 40px 20px 48px; }
+
+  .footer-card {
+    padding: 28px 24px 22px;
+    border-radius: 22px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-nav {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px 16px;
+  }
 }
 
 
@@ -1532,6 +1649,19 @@ button { font-family: var(--font-main); }
   .hero-shapes { display: none; }
 
   .section-title { font-size: 34px; }
+
+  .footer-nav {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-col:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
   .benefits-grid { max-width: 100%; }
 
@@ -1602,31 +1732,6 @@ button { font-family: var(--font-main); }
   pointer-events: none;
   z-index: 0;
   animation: bgFadeIn 1.2s ease forwards;
-}
-
-/* ── SOCIAL ICONS ───────────────────────────────────────────────── */
-/* Icons use explicit white fills: currentColor doesn't cascade into
-   background-image SVGs, so it would resolve to black and vanish
-   on the dark footer. Opacity keeps them muted until hover. */
-.social-svg {
-  display: block;
-  width: 14px;
-  height: 14px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.6;
-  transition: opacity var(--transition), filter var(--transition);
-}
-
-.social-twitter  { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.73-8.835L1.254 2.25H8.08l4.713 5.923zm-1.161 17.52h1.833L7.084 4.126H5.117z'/%3E%3C/svg%3E"); }
-.social-linkedin { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z'/%3E%3Ccircle cx='4' cy='4' r='2'/%3E%3C/svg%3E"); }
-.social-telegram { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71l-4.14-3.05-1.99 1.93c-.23.23-.42.42-.83.42z'/%3E%3C/svg%3E"); }
-
-/* Tint white icons orange on hover: flatten to black first, then colorize */
-.social-icon:hover .social-svg {
-  opacity: 1;
-  filter: brightness(0) saturate(100%) invert(47%) sepia(99%) saturate(456%) hue-rotate(348deg) brightness(100%) contrast(94%);
 }
 
 /* ── CHART LEGEND DOT COLORS ────────────────────────────────────── */
