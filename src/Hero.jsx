@@ -11,7 +11,7 @@ const HERO = {
 
 const HEADLINE = [
   { words: ['WE', 'HELP', 'YOU', 'SEE'] },
-  { words: ['GROWTH', 'AND', 'BUILD', 'IT'], accent: true },
+  { words: ['GROWTH', 'AND', 'BUILD', 'IT.'], accent: true },
 ];
 
 const ease = [0.22, 1, 0.36, 1];
