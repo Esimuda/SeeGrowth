@@ -2,7 +2,6 @@ import { motion, useReducedMotion } from 'framer-motion';
 
 const HERO = {
   headline: 'We Help You See Growth',
-  watermark: 'Growth',
   socialProof: {
     count: '200+',
     label: 'Happy clients around the world',
@@ -32,15 +31,6 @@ export default function Hero() {
   return (
     <section className="hero hero-bento" id="home">
       <div className="hero-glow" aria-hidden="true" />
-      <motion.p
-        className="hero-watermark"
-        aria-hidden="true"
-        initial={reduce ? false : { opacity: 0, scale: 0.96 }}
-        animate={{ opacity: 0.045, scale: 1 }}
-        transition={{ duration: 1.2, ease }}
-      >
-        {HERO.watermark}
-      </motion.p>
 
       <div className="hero-stage">
         <h1 className="hero-headline">

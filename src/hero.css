@@ -303,8 +303,7 @@
     radial-gradient(ellipse at 50% 18%, rgba(0, 0, 0, 0.22) 0%, transparent 58%);
 }
 
-.hero.hero-bento > .hero-glow,
-.hero.hero-bento > .hero-watermark {
+.hero.hero-bento > .hero-glow {
   position: absolute;
   z-index: 1;
 }
@@ -324,22 +323,6 @@
   pointer-events: none;
   z-index: 1;
   filter: blur(8px);
-}
-
-.hero-watermark {
-  position: absolute;
-  left: 3%;
-  top: 18%;
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: clamp(120px, 22vw, 340px);
-  line-height: 0.8;
-  letter-spacing: -0.04em;
-  color: #fff;
-  pointer-events: none;
-  z-index: 1;
-  user-select: none;
-  white-space: nowrap;
 }
 
 .hero-stage {
@@ -531,12 +514,6 @@
     flex-direction: column;
     align-items: center;
     padding: 28px 20px 36px;
-  }
-
-  .hero-watermark {
-    font-size: 96px;
-    top: 70px;
-    left: 12px;
   }
 
   .hero-headline,
