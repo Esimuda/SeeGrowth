@@ -126,37 +126,6 @@ export default function Hero() {
             </div>
           </motion.a>
         </motion.div>
-
-        <motion.svg
-          className="hero-scribble"
-          viewBox="0 0 180 130"
-          fill="none"
-          aria-hidden="true"
-          initial={reduce ? false : { opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.9, duration: 0.3 }}
-        >
-          <motion.path
-            d="M18 22C46 8 92 6 124 28c26 18 38 42 22 62-18 22-62 28-46 8 10-12 48-8 72 10"
-            stroke="#F26419"
-            strokeWidth="3.2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            initial={reduce ? false : { pathLength: 0 }}
-            animate={{ pathLength: 1 }}
-            transition={{ duration: 1.45, delay: 1.05, ease: 'easeInOut' }}
-          />
-          <motion.path
-            d="M154 86l18 16-22 2"
-            stroke="#F26419"
-            strokeWidth="3.2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            initial={reduce ? false : { pathLength: 0, opacity: 0 }}
-            animate={{ pathLength: 1, opacity: 1 }}
-            transition={{ duration: 0.4, delay: 2.2, ease }}
-          />
-        </motion.svg>
       </div>
     </section>
   );
