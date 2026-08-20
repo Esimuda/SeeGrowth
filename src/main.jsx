@@ -7,12 +7,14 @@ import Benefits from './Benefits.jsx';
 import Services from './Services.jsx';
 import Events from './Events.jsx';
 import EventVideo from './EventVideo.jsx';
+import Testimonials from './Testimonials.jsx';
 import './hero.css';
 import './logo-carousel.css';
 import './benefits.css';
 import './services.css';
 import './events.css';
 import './event-video.css';
+import './testimonials.css';
 
 createRoot(document.getElementById('nav-root')).render(
   <StrictMode>
@@ -53,6 +55,12 @@ createRoot(document.getElementById('events-root')).render(
 createRoot(document.getElementById('event-video-root')).render(
   <StrictMode>
     <EventVideo />
+  </StrictMode>
+);
+
+createRoot(document.getElementById('testimonials-root')).render(
+  <StrictMode>
+    <Testimonials />
   </StrictMode>
 );
 
