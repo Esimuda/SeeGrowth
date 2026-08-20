@@ -122,6 +122,12 @@
   font-weight: 500;
 }
 
+.services-feature-foot em {
+  font-style: normal;
+  color: #F26419;
+  font-weight: 700;
+}
+
 .services-list {
   display: flex;
   flex-direction: column;

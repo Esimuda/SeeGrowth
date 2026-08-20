@@ -75,7 +75,7 @@ export default function Services() {
           </div>
 
           <div className="services-feature-foot">
-            <p>Your partner in visible growth</p>
+            <p>Your partner in visible <em>growth</em></p>
           </div>
         </motion.a>
 
