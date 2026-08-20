@@ -875,16 +875,18 @@ button { font-family: var(--font-main); }
   flex-direction: column;
   justify-content: flex-end;
   min-height: min(52vh, 460px);
+  border: 0;
+  outline: none;
   border-radius: calc(var(--radius-card) + 8px);
   overflow: hidden;
   background: #1a0f0a;
-  box-shadow: 0 18px 40px rgba(120, 40, 0, 0.28);
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+  box-shadow: none;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .cases-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 24px 52px rgba(80, 25, 0, 0.34);
+  box-shadow: none;
 }
 
 .cases-card__img {

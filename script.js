@@ -421,7 +421,7 @@ onReady(function () {
      15. CASE & SERVICE CARD — diagonal shine sweep on hover
      ============================================================== */
   if (!reduced) {
-    document.querySelectorAll('.cases-card, .case-card, .service-card').forEach(function (card) {
+    document.querySelectorAll('.service-card').forEach(function (card) {
       card.style.position = 'relative';
       var shine = document.createElement('div');
       shine.setAttribute('aria-hidden', 'true');
