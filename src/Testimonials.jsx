@@ -17,7 +17,7 @@ const TESTIMONIALS = [
       'They made our brand impossible to ignore. Data-backed creative and a system that finally matched how fast we ship.',
     name: 'Michael Anderson',
     role: 'Growth Lead',
-    company: 'Microsoft',
+    company: 'Allscale',
     avatar: '/assets/testimonials/michael.webp',
   },
   {
