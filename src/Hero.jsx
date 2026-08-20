@@ -2,12 +2,6 @@ import { motion, useReducedMotion } from 'framer-motion';
 
 const HERO = {
   headline: 'We Help You See Growth',
-  person: {
-    src: '/assets/hero-person-visor.webp',
-    alt: 'Futuristic strategist wearing an orange visor, lit by SeeGrowth brand glow',
-    width: 720,
-    height: 816,
-  },
   socialProof: {
     count: '200+',
     label: 'Happy clients around the world',
@@ -55,22 +49,6 @@ export default function Hero() {
             </span>
           ))}
         </h1>
-
-        <motion.div
-          className="hero-person"
-          initial={reduce ? false : { opacity: 0, y: 48, scale: 0.96 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.95, delay: 0.28, ease }}
-        >
-          <img
-            src={HERO.person.src}
-            alt={HERO.person.alt}
-            width={HERO.person.width}
-            height={HERO.person.height}
-            fetchPriority="high"
-            decoding="async"
-          />
-        </motion.div>
 
         <motion.div
           className="hero-slot hero-slot--users"
