@@ -6,7 +6,6 @@ const ROWS = [
     src: '/assets/service-paid-rocket.webp',
     alt: 'Iridescent 3D rocket launching, representing paid traffic that converts',
     title: 'Paid traffic that finds wallets ready to convert',
-    meta: 'Always on',
     href: '#booking',
     featured: true,
   },
@@ -15,7 +14,6 @@ const ROWS = [
     src: '/assets/service-brand-star.webp',
     alt: 'Iridescent 3D star burst, representing brand systems at every touchpoint',
     title: 'Brand systems that look inevitable at every touchpoint',
-    meta: 'Q2 2026',
     href: '#booking',
   },
   {
@@ -23,7 +21,6 @@ const ROWS = [
     src: '/assets/service-content-torus.webp',
     alt: 'Iridescent 3D torus, representing content engines that convert lurkers',
     title: 'Content engines that turn lurkers into believers',
-    meta: 'Q3 2026',
     href: '#booking',
   },
 ];
@@ -95,7 +92,6 @@ export default function Services() {
                 <span className="services-row-copy">
                   <strong>{row.title}</strong>
                 </span>
-                <span className="services-row-meta">{row.meta}</span>
                 <span className={`services-row-go${row.featured ? ' is-primary' : ''}`} aria-hidden="true">
                   <ArrowUpRight />
                 </span>
