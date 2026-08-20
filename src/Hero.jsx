@@ -58,8 +58,8 @@ export default function Hero() {
 
         <motion.div
           className="hero-person"
-          initial={reduce ? false : { opacity: 0, y: 40, scale: 0.94 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
+          initial={reduce ? false : { opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.95, delay: 0.28, ease }}
         >
           <img
