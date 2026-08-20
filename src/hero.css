@@ -37,6 +37,7 @@
   height: var(--logo-h);
   width: auto;
   filter: contrast(1.1) saturate(1.14);
+  transform: none;
 }
 
 .site-nav .nav-links {

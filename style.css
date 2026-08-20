@@ -19,7 +19,7 @@
   --font-main:     'Inter', sans-serif;
   --font-display:  'Bebas Neue', sans-serif;
   --nav-h:         68px;
-  --logo-h:        24px;
+  --logo-h:        18px;
   --radius-card:   16px;
   --radius-btn:    50px;
   --shadow-card:   0 8px 40px rgba(0, 0, 0, 0.5);
@@ -486,6 +486,7 @@ button { font-family: var(--font-main); }
   flex-shrink: 0;
   image-rendering: -webkit-optimize-contrast;
   filter: contrast(1.08) saturate(1.12);
+  transform: none;
 }
 
 /* Nav links */

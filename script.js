@@ -566,32 +566,6 @@ onReady(function () {
 
 
   /* ==============================================================
-     22. NAVBAR LOGO SCALE ON FAST SCROLL
-         The logo icon subtly enlarges proportional to scroll speed.
-     ============================================================== */
-  if (!reduced) {
-    var lastY = window.scrollY;
-    var lastT = performance.now();
-    var logoImg = document.querySelector('.navbar .logo-img');
-    var logoReset;
-
-    window.addEventListener('scroll', function () {
-      var now = performance.now();
-      var vel = Math.abs(window.scrollY - lastY) / Math.max(now - lastT, 1);
-      if (logoImg) {
-        var s = Math.min(1 + vel * 0.55, 1.28).toFixed(3);
-        logoImg.style.transition = 'transform .18s ease';
-        logoImg.style.transform  = 'scale(' + s + ')';
-        clearTimeout(logoReset);
-        logoReset = setTimeout(function () { logoImg.style.transform = 'scale(1)'; }, 200);
-      }
-      lastY = window.scrollY;
-      lastT = now;
-    }, { passive: true });
-  }
-
-
-  /* ==============================================================
      23. CURSOR GLOW TRAIL — lagging orange dot follows mouse
          Desktop only, adds warmth and brand presence.
      ============================================================== */
