@@ -484,6 +484,8 @@ button { font-family: var(--font-main); }
   height: var(--logo-h);
   width: auto;
   flex-shrink: 0;
+  image-rendering: -webkit-optimize-contrast;
+  filter: contrast(1.08) saturate(1.12);
 }
 
 /* Nav links */
@@ -997,8 +999,9 @@ button { font-family: var(--font-main); }
 
 .deck-logo {
   display: block;
-  height: 28px;
+  height: 18px;
   width: auto;
+  filter: contrast(1.08) saturate(1.12);
 }
 
 .deck-sub {
