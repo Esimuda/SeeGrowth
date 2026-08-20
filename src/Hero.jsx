@@ -23,10 +23,6 @@ const HERO = {
       { src: '/assets/avatar-michael.jpg', alt: 'Michael Anderson' },
     ],
   },
-  stats: [
-    { value: '30%', label: 'Revenue growth' },
-    { value: '3', label: 'Core services' },
-  ],
 };
 
 const ease = [0.22, 1, 0.36, 1];
@@ -180,22 +176,6 @@ export default function Hero() {
             transition={{ duration: 0.4, delay: 2.2, ease }}
           />
         </motion.svg>
-
-        <motion.div
-          className="hero-slot hero-slot--stats"
-          initial={reduce ? false : { opacity: 0, x: 24 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7, delay: 0.85, ease }}
-        >
-          <motion.div className="hero-stats" animate={reduce ? undefined : floatAnim(0.6, 6)}>
-            {HERO.stats.map((stat) => (
-              <div key={stat.label} className="hero-stat">
-                <strong>{stat.value}</strong>
-                <span>{stat.label}</span>
-              </div>
-            ))}
-          </motion.div>
-        </motion.div>
       </div>
     </section>
   );
