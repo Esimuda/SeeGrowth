@@ -10,8 +10,8 @@ const HERO = {
 };
 
 const HEADLINE = [
-  { words: ['We', 'Help', 'You', 'See'] },
-  { words: ['Growth'], accent: true },
+  { words: ['WE', 'HELP', 'YOU', 'SEE'] },
+  { words: ['GROWTH', 'AND', 'BUILD', 'IT'], accent: true },
 ];
 
 const ease = [0.22, 1, 0.36, 1];
@@ -39,7 +39,7 @@ export default function Hero() {
                   return (
                     <span
                       key={`${word}-${i}`}
-                      className={`hero-word${line.accent || word.toLowerCase() === 'growth' ? ' hero-word--accent' : ''}`}
+                      className={`hero-word${word === 'GROWTH' ? ' hero-word--accent' : ''}`}
                     >
                       <motion.span
                         initial={reduce ? false : { y: '110%', opacity: 0 }}
