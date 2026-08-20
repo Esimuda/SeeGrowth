@@ -430,8 +430,8 @@
   left: 0;
   /* Slide ~42% of the asset off-canvas so it emerges from the left edge */
   transform: translate(-42%, -50%);
-  width: min(46vw, 520px);
-  height: min(82vh, 780px);
+  width: min(40vw, 450px);
+  height: min(72vh, 680px);
 }
 
 .hero-art--left img {
@@ -512,8 +512,8 @@
   }
 
   .hero-art--left {
-    width: min(50vw, 440px);
-    height: min(76vh, 660px);
+    width: min(44vw, 380px);
+    height: min(68vh, 580px);
     transform: translate(-46%, -50%);
   }
 
