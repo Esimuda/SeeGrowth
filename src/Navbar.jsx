@@ -132,39 +132,62 @@ export default function Navbar() {
               role="dialog"
               aria-modal="true"
               aria-label="Search SeeGrowth"
-              initial={reduce ? false : { y: 24, opacity: 0, scale: 0.98 }}
+              initial={reduce ? false : { y: 16, opacity: 0, scale: 0.98 }}
               animate={{ y: 0, opacity: 1, scale: 1 }}
-              exit={{ y: 16, opacity: 0, scale: 0.98 }}
-              transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
+              exit={{ y: 12, opacity: 0, scale: 0.98 }}
+              transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
               onClick={(e) => e.stopPropagation()}
             >
+              <div className="search-panel-head">
+                <p className="search-panel-title">Search</p>
+                <button type="button" className="search-close" aria-label="Close search" onClick={closeAll}>
+                  <CloseIcon />
+                </button>
+              </div>
+
               <div className="search-input-wrap">
                 <SearchIcon />
                 <input
                   autoFocus
                   type="search"
-                  placeholder="Search services, case studies, booking…"
+                  placeholder="Services, case studies, booking…"
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                 />
                 <kbd>Esc</kbd>
               </div>
-              <ul className="search-results">
-                {results.length === 0 && <li className="search-empty">No matches. Try “traffic” or “consult”.</li>}
-                {results.map((item) => (
-                  <li key={item.title}>
-                    <a href={item.href} onClick={closeAll}>
-                      <span>{item.title}</span>
-                      <small>{item.hint}</small>
-                    </a>
-                  </li>
-                ))}
-              </ul>
+
+              <div className="search-results-wrap">
+                <p className="search-results-label">
+                  {results.length === 0 ? 'No results' : `${results.length} result${results.length === 1 ? '' : 's'}`}
+                </p>
+                <ul className="search-results">
+                  {results.length === 0 && (
+                    <li className="search-empty">Try “traffic”, “consult”, or “faq”.</li>
+                  )}
+                  {results.map((item) => (
+                    <li key={item.title}>
+                      <a href={item.href} onClick={closeAll}>
+                        <span>{item.title}</span>
+                        <small>{item.hint}</small>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
     </>
+  );
+}
+
+function CloseIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    </svg>
   );
 }
 
