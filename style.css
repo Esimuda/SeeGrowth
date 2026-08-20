@@ -1391,7 +1391,7 @@ button { font-family: var(--font-main); }
   font-family: var(--font-main);
   font-size: 14px;
   line-height: 1.65;
-  color: var(--orange);
+  color: #111;
   padding: 0 56px 0 22px;
   transition: max-height 0.38s cubic-bezier(0.22, 1, 0.36, 1),
               padding 0.3s ease;
