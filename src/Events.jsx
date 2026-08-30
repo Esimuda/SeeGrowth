@@ -1,40 +1,50 @@
 import { useCallback, useEffect, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 
-const PHOTO_IDS = [
-  1, 2, 3, 4, 5, 6, 7, 29, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
-];
-
-const PHOTOS = PHOTO_IDS.map((id) => {
+const PHOTOS = [
+  { id: 1, alt: 'Speaker on stage at HashKey Horizon Hackathon' },
+  { id: 2, alt: 'HashKey Chain presentation at Horizon Hackathon' },
+  { id: 3, alt: 'Horizon Hackathon finalists with From 0 to Demo signs' },
+  { id: 4, alt: 'Horizon Hackathon finalists holding HashKey and event signs' },
+  { id: 5, alt: 'Team posing with From 0 to Demo signs at Horizon Hackathon' },
+  { id: 6, alt: 'Builders huddling over a laptop at Horizon Hackathon' },
+  { id: 7, alt: 'Audience seated at Horizon Hackathon' },
+  { id: 29, alt: 'Builders connecting over merch at Horizon Hackathon' },
+  { id: 8, alt: 'Talk at Solar Mini Hacker House with SeeGrowth' },
+  { id: 9, alt: 'Group photo at Solar Mini Hacker House in Singapore' },
+  { id: 10, alt: 'SeeGrowth and Solana signs at Solar Mini Hacker House' },
+  { id: 11, alt: 'Host with a WAGMI mic at Solar Mini Hacker House x SeeGrowth' },
+  { id: 12, alt: 'SeeGrowth builders at Solana Mini Hacker House' },
+  { id: 13, alt: 'SeeGrowth, Solana, and Huawei partners together' },
+  { id: 14, alt: 'Builders at Solana Foundation Cypherpunk house' },
+  { id: 15, alt: 'Operators coordinating between sessions' },
+  { id: 16, alt: 'Networking between talks at a partner event' },
+  { id: 17, alt: 'Conversations at Arbitrum Asia' },
+].map(({ id, alt }) => {
   const n = String(id).padStart(2, '0');
-  const bust = id <= 7 || id === 29 ? '?v=3' : id <= 18 ? '?v=2' : '';
+  const bust = id <= 7 || id === 29 ? '?v=3' : '?v=2';
   return {
     id: `photo-${n}`,
     src: `/assets/events/event-photo-${n}.webp${bust}`,
-    alt: `Community event photo ${id}`,
+    alt,
   };
 });
 
 const LABELS = [
-  'Community nights',
-  'Team tables',
-  'Founders dinners',
-  'On-stage moments',
-  'Hacker house',
-  'Builder meetups',
-  'Alliance sessions',
-  'Partner rooms',
-  'After hours',
-  'Studio nights',
-  'Signal rooms',
-  'Growth circles',
-  'Launch tables',
-  'Field notes',
+  'Horizon Hackathon',
+  'Hackathon finalists',
+  'From 0 to demo',
+  'On the builder floor',
+  'Solar Mini Hacker House',
+  'Singapore builder house',
+  'SeeGrowth × Solana',
+  'Cypherpunk house',
+  'Arbitrum Asia',
 ];
 
 const SLIDES = Array.from({ length: Math.floor(PHOTOS.length / 2) }, (_, i) => ({
   id: `slide-${i + 1}`,
-  label: LABELS[i % LABELS.length],
+  label: LABELS[i],
   left: PHOTOS[i * 2],
   right: PHOTOS[i * 2 + 1],
 }));
