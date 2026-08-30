@@ -156,6 +156,10 @@
   object-position: 38% 16%;
 }
 
+.benefits-card--left .benefits-card-media img {
+  object-position: center 10%;
+}
+
 .benefits-card--right .benefits-card-media img {
   object-position: center 12%;
 }
