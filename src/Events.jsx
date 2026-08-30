@@ -19,7 +19,7 @@ const PHOTOS = [
   { id: 14, alt: 'Builders at Solana Foundation Cypherpunk house' },
   { id: 15, alt: 'Operators coordinating between sessions' },
   { id: 16, alt: 'Networking between talks at a partner event' },
-  { id: 17, alt: 'Conversations at Arbitrum Asia' },
+  { id: 17, alt: 'Networking conversations at a partner event' },
 ].map(({ id, alt }) => {
   const n = String(id).padStart(2, '0');
   const bust = id <= 7 || id === 29 ? '?v=3' : '?v=2';
@@ -39,7 +39,7 @@ const LABELS = [
   'Singapore builder house',
   'SeeGrowth × Solana',
   'Cypherpunk house',
-  'Arbitrum Asia',
+  'Networking',
 ];
 
 const SLIDES = Array.from({ length: Math.floor(PHOTOS.length / 2) }, (_, i) => ({
