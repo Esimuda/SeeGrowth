@@ -924,7 +924,10 @@ button { font-family: var(--font-main); }
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-end;
   gap: 10px;
+  width: 100%;
+  min-height: 210px;
   padding: 28px 24px 24px;
 }
 
@@ -941,6 +944,7 @@ button { font-family: var(--font-main); }
 .cases-card__copy {
   margin: 0 0 8px;
   max-width: 28ch;
+  min-height: calc(1.45em * 5);
   font-family: var(--font-main);
   font-size: 14px;
   font-weight: 500;
