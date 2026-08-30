@@ -17,8 +17,8 @@ const CARDS = [
   },
   {
     id: 'tailored',
-    src: '/assets/benefit-tailored.webp?v=8',
-    alt: 'Professional portrait of a man representing tailored brand solutions',
+    src: '/assets/benefit-tailored.webp?v=9',
+    alt: 'Studio portrait of a woman looking over her shoulder, representing tailored brand solutions',
     title: 'Tailored Solutions',
     href: '#services',
   },
