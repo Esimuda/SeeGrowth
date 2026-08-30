@@ -89,38 +89,44 @@
 
 .benefits-board {
   display: grid;
-  grid-template-columns: 1.05fr 1fr 1.05fr;
-  grid-template-rows: auto 1fr;
-  gap: 18px;
-  max-width: 1080px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 780px;
   margin: 0 auto;
-  align-items: stretch;
+  align-items: start;
 }
 
-.benefits-card--left { grid-column: 1; grid-row: 1 / 3; }
-.benefits-cta { grid-column: 2; grid-row: 1; }
-.benefits-card--mid { grid-column: 2; grid-row: 2; }
-.benefits-card--right { grid-column: 3; grid-row: 1 / 3; }
+.benefits-cta {
+  grid-column: 1 / -1;
+}
+
+.benefits-card--left,
+.benefits-card--mid,
+.benefits-card--right {
+  grid-column: auto;
+  grid-row: auto;
+}
 
 .benefits-card {
   display: flex;
   flex-direction: column;
   background: #fff;
-  border-radius: 28px;
+  border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 10px 36px rgba(0, 0, 0, 0.06);
   min-height: 0;
 }
 
 .benefits-card-media {
-  flex: 1;
-  min-height: 220px;
+  aspect-ratio: 1 / 1;
+  min-height: 0;
   overflow: hidden;
+  flex: none;
 }
 
 .benefits-card--left .benefits-card-media,
 .benefits-card--right .benefits-card-media {
-  min-height: 320px;
+  min-height: 0;
 }
 
 .benefits-card--right .benefits-card-media {
@@ -131,25 +137,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.benefits-card--mid .benefits-card-media img {
-  object-position: 50% 18%;
-}
-
-.benefits-card--right .benefits-card-media img {
-  object-fit: cover;
-  object-position: 62% 56%;
-  transform: scale(1.1);
 }
 
 .benefits-card:hover .benefits-card-media img {
   transform: scale(1.06);
-}
-
-.benefits-card--right:hover .benefits-card-media img {
-  transform: scale(1.16);
 }
 
 .benefits-card-body {
@@ -245,6 +238,7 @@
   .benefits-board {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    max-width: 360px;
   }
 
   .benefits-card--left,
@@ -258,8 +252,9 @@
   .benefits-card--left .benefits-card-media,
   .benefits-card--right .benefits-card-media,
   .benefits-card-media {
-    min-height: 220px;
-    height: 240px;
+    aspect-ratio: 1 / 1;
+    min-height: 0;
+    height: auto;
     flex: none;
   }
 }

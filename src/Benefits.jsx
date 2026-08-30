@@ -3,22 +3,22 @@ import { motion, useReducedMotion } from 'framer-motion';
 const CARDS = [
   {
     id: 'brand',
-    src: '/assets/benefit-brand.webp',
-    alt: 'Bold orange fashion portrait in tinted sunglasses and quilted jacket, representing elevated brand identity',
+    src: '/assets/benefit-brand.webp?v=4',
+    alt: 'Studio portrait of an East Asian woman, representing elevated brand identity',
     title: 'Elevate Your Brand',
     href: '#services',
   },
   {
     id: 'roi',
-    src: '/assets/benefit-roi.webp',
-    alt: 'Editorial portrait in geometric red headwear and garment, representing precision and maximizing returns',
+    src: '/assets/benefit-roi.webp?v=4',
+    alt: 'Studio portrait of an East Asian businessman, representing precision and maximizing returns',
     title: 'Maximize ROI',
     href: '#services',
   },
   {
     id: 'tailored',
-    src: '/assets/benefit-tailored.png',
-    alt: 'Confident portrait in orange satin with dramatic lighting, representing tailored brand solutions',
+    src: '/assets/benefit-tailored.jpg?v=4',
+    alt: 'Professional portrait of a white businessman, representing tailored brand solutions',
     title: 'Tailored Solutions',
     href: '#services',
   },
@@ -41,9 +41,9 @@ export default function Benefits() {
           transition={{ duration: 0.7, ease }}
         >
           <div className="benefits-avatars">
-            <img src="/assets/avatar-john.jpg" alt="John Adams" />
-            <img src="/assets/avatar-jane.jpg" alt="Jane Does" />
-            <img src="/assets/avatar-michael.jpg" alt="Michael Anderson" />
+            <img src="/assets/avatar-john.jpg?v=4" alt="John Adams" />
+            <img src="/assets/avatar-jane.jpg?v=4" alt="Jane Does" />
+            <img src="/assets/avatar-michael.jpg?v=4" alt="Michael Anderson" />
           </div>
           <p>See growth. Scale smart.</p>
         </motion.div>
