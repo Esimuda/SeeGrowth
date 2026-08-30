@@ -158,18 +158,6 @@
   transform: translateX(-50%) scale(1.04);
 }
 
-.benefits-card--mid .benefits-card-media img {
-  left: auto;
-  right: -15%;
-  height: 124%;
-  transform: none;
-  transform-origin: right bottom;
-}
-
-.benefits-card--mid:hover .benefits-card-media img {
-  transform: scale(1.04);
-}
-
 .benefits-card-body {
   display: flex;
   align-items: flex-end;
