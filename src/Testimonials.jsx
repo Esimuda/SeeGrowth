@@ -8,7 +8,7 @@ const TESTIMONIALS = [
       'SeeGrowth transformed our pipeline. Creative campaigns, sharp targeting, and real growth we could measure week to week.',
     name: 'John Adams',
     role: 'Marketing Director',
-    company: 'Helix Finance',
+    company: 'OpenBuild',
     avatar: '/assets/testimonials/john.webp',
   },
   {
@@ -26,7 +26,7 @@ const TESTIMONIALS = [
       'SeeGrowth gave us a competitive edge. Clear strategy, crisp execution, and campaigns that compounded instead of fading.',
     name: 'Jane Does',
     role: 'Founder & CEO',
-    company: 'Meridian Labs',
+    company: 'Solar',
     avatar: '/assets/testimonials/jane.webp',
   },
   {
