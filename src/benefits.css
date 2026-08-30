@@ -148,7 +148,12 @@
 }
 
 .benefits-card--mid .benefits-card-media img {
-  object-position: center 12%;
+  width: 142%;
+  height: 112%;
+  left: -26%;
+  top: -6%;
+  object-fit: cover;
+  object-position: 38% 16%;
 }
 
 .benefits-card--right .benefits-card-media img {
