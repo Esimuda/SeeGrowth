@@ -30,12 +30,12 @@ const SEARCH_INDEX = [
   { title: 'Content Engines', href: '#services', hint: 'Content that turns lurkers into believers' },
   { title: 'Community Events', href: '#events', hint: 'Photos and moments from SeeGrowth gatherings' },
   { title: 'Solar Singapore Reel', href: '#event-video', hint: 'Highlight video from the community' },
-  { title: 'Helix Finance', href: '#case-studies', hint: 'How Helix cut CAC by 41% with paid traffic' },
-  { title: 'Meridian Labs', href: '#case-studies', hint: 'Brand and content matched to product velocity' },
+  { title: '021Labs', href: '#case-studies', hint: 'Brand system, visual language, and identity that lands' },
+  { title: 'Solar Hackathons', href: '#case-studies', hint: 'How SeeGrowth helped organize Solar hackathons' },
   {
-    title: 'Orbit DAO Pitch Deck',
+    title: 'OpenBuild Pitch Deck',
     href: 'https://www.dropbox.com/scl/fi/pwmjqyx41y9sq79oq24jp/SeeGrowth-Deck-2026.pdf?rlkey=7a2oba79q4eh951vilfl14zyl&st=y674i4kx&dl=0',
-    hint: 'View the 2026 SeeGrowth growth deck',
+    hint: 'View the 2026 growth deck and partner story',
     external: true,
   },
   { title: 'Testimonials', href: '#testimonials', hint: 'What clients say about working with us' },
@@ -155,7 +155,7 @@ export default function Navbar() {
                 </p>
                 <ul className="search-results">
                   {results.length === 0 && (
-                    <li className="search-empty">Try “events”, “helix”, “pricing”, or “book”.</li>
+                    <li className="search-empty">Try “solar”, “openbuild”, “pricing”, or “book”.</li>
                   )}
                   {results.map((item) => (
                     <li key={item.title}>
