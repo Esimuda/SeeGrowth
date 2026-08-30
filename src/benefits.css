@@ -113,7 +113,7 @@
 
 .benefits-card--left,
 .benefits-card--right {
-  background: #f26419;
+  background: linear-gradient(160deg, #ff9a4a 0%, #f26419 48%, #c43d0c 100%);
 }
 
 .benefits-card--mid {
@@ -129,7 +129,7 @@
 .benefits-card--left .benefits-card-media,
 .benefits-card--right .benefits-card-media {
   min-height: 320px;
-  background: #f26419;
+  background: linear-gradient(160deg, #ff9a4a 0%, #f26419 48%, #c43d0c 100%);
 }
 
 .benefits-card--mid .benefits-card-media {
@@ -139,21 +139,13 @@
 .benefits-card-media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 18%;
+  object-fit: contain;
+  object-position: center bottom;
   transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.benefits-card--mid .benefits-card-media img {
-  object-position: center 12%;
-}
-
-.benefits-card--right .benefits-card-media img {
-  object-position: center 16%;
-}
-
 .benefits-card:hover .benefits-card-media img {
-  transform: scale(1.06);
+  transform: scale(1.04);
 }
 
 .benefits-card-body {

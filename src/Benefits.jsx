@@ -3,22 +3,22 @@ import { motion, useReducedMotion } from 'framer-motion';
 const CARDS = [
   {
     id: 'brand',
-    src: '/assets/benefit-brand.webp?v=6',
-    alt: 'Professional portrait of a woman with a laptop against an orange studio wall',
+    src: '/assets/benefit-brand.png?v=7',
+    alt: 'Professional portrait of a woman representing elevated brand identity',
     title: 'Elevate Your Brand',
     href: '#services',
   },
   {
     id: 'roi',
-    src: '/assets/benefit-roi.webp?v=6',
-    alt: 'Professional portrait of an East Asian woman in a modern office',
+    src: '/assets/benefit-roi.png?v=7',
+    alt: 'Professional portrait of an East Asian woman representing maximizing returns',
     title: 'Maximize ROI',
     href: '#services',
   },
   {
     id: 'tailored',
-    src: '/assets/benefit-tailored.webp?v=6',
-    alt: 'Professional portrait of a man in a modern lounge, representing tailored solutions',
+    src: '/assets/benefit-tailored.png?v=7',
+    alt: 'Professional portrait of a man representing tailored brand solutions',
     title: 'Tailored Solutions',
     href: '#services',
   },
