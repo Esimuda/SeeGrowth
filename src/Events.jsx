@@ -1,15 +1,17 @@
 import { useCallback, useEffect, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 
-const PHOTO_COUNT = 28;
+const PHOTO_IDS = [
+  1, 2, 3, 4, 5, 6, 7, 29, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28,
+];
 
-const PHOTOS = Array.from({ length: PHOTO_COUNT }, (_, i) => {
-  const n = String(i + 1).padStart(2, '0');
-  const bust = i < 18 ? '?v=2' : '';
+const PHOTOS = PHOTO_IDS.map((id) => {
+  const n = String(id).padStart(2, '0');
+  const bust = id <= 7 || id === 29 ? '?v=3' : id <= 18 ? '?v=2' : '';
   return {
     id: `photo-${n}`,
     src: `/assets/events/event-photo-${n}.webp${bust}`,
-    alt: `Community event photo ${i + 1}`,
+    alt: `Community event photo ${id}`,
   };
 });
 
@@ -30,7 +32,7 @@ const LABELS = [
   'Field notes',
 ];
 
-const SLIDES = Array.from({ length: Math.floor(PHOTO_COUNT / 2) }, (_, i) => ({
+const SLIDES = Array.from({ length: Math.floor(PHOTOS.length / 2) }, (_, i) => ({
   id: `slide-${i + 1}`,
   label: LABELS[i % LABELS.length],
   left: PHOTOS[i * 2],
