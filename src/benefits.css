@@ -135,37 +135,27 @@
 
 .benefits-card--mid .benefits-card-media {
   background: #fff;
+  min-height: 280px;
 }
 
 .benefits-card-media img {
   position: absolute;
-  inset: 0;
-  width: 100%;
+  left: 50%;
+  bottom: 0;
+  top: auto;
+  right: auto;
+  width: auto;
   height: 100%;
-  object-fit: cover;
-  object-position: center 18%;
+  max-width: none;
+  object-fit: contain;
+  object-position: center bottom;
+  transform: translateX(-50%);
+  transform-origin: center bottom;
   transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.benefits-card--mid .benefits-card-media img {
-  width: 142%;
-  height: 112%;
-  left: -26%;
-  top: -6%;
-  object-fit: cover;
-  object-position: 38% 16%;
-}
-
-.benefits-card--left .benefits-card-media img {
-  object-position: center 10%;
-}
-
-.benefits-card--right .benefits-card-media img {
-  object-position: center 12%;
-}
-
 .benefits-card:hover .benefits-card-media img {
-  transform: scale(1.06);
+  transform: translateX(-50%) scale(1.04);
 }
 
 .benefits-card-body {
