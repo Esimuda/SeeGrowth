@@ -3,8 +3,8 @@ import { motion, useReducedMotion } from 'framer-motion';
 const CARDS = [
   {
     id: 'brand',
-    src: '/assets/benefit-brand.webp?v=12',
-    alt: 'Studio portrait of a smiling man with orange rim light representing elevated brand identity',
+    src: '/assets/benefit-brand.webp?v=16',
+    alt: 'Studio portrait of a woman in embroidered orange attire representing elevated brand identity',
     title: 'Elevate Your Brand',
     href: '#services',
   },
