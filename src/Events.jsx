@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 
 const PHOTO_IDS = [
-  1, 2, 3, 4, 5, 6, 7, 29, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28,
+  1, 2, 3, 4, 5, 6, 7, 29, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
 ];
 
 const PHOTOS = PHOTO_IDS.map((id) => {

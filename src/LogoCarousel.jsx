@@ -4,7 +4,6 @@ const PARTNER_LOGOS = [
   { src: '/assets/partners/scalingx-labs.png', alt: 'ScalingX Labs', wide: false },
   { src: '/assets/partners/openbuild.png', alt: 'OpenBuild', wide: false },
   { src: '/assets/partners/021lab.png', alt: '021Lab', wide: false },
-  { src: '/assets/partners/allscale.png', alt: 'AllScale', wide: false },
   { src: '/assets/partners/blockchain-ntu.png', alt: 'Blockchain at NTU', wide: false },
   { src: '/assets/partners/exchanges.png', alt: 'OKX, Bybit, KuCoin, MEXC, Bitget, Gate.io, and more', wide: true },
 ];
