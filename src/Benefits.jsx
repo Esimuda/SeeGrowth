@@ -10,7 +10,7 @@ const CARDS = [
   },
   {
     id: 'roi',
-    src: '/assets/benefit-roi.webp?v=14',
+    src: '/assets/benefit-roi.webp?v=15',
     alt: 'Studio portrait of a man in an orange shirt representing maximizing returns',
     title: 'Maximize ROI',
     href: '#services',
